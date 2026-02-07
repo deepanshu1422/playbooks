@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Jobs Coaching - Playbook Viewer</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .file-selector {
+            margin-top: 10px;
+        }
+        
+        .file-selector select {
+            padding: 10px 15px;
+            font-size: 1em;
+            border: none;
+            border-radius: 8px;
+            background: white;
+            color: #333;
+            cursor: pointer;
+            min-width: 300px;
+            max-width: 100%;
+        }
+        
+        .file-selector button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 8px;
+            background: white;
+            color: #667eea;
+            cursor: pointer;
+            margin-left: 10px;
+            font-weight: 600;
+        }
+        
+        .file-selector button:hover {
+            background: #f0f0f0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 40px;
+            min-height: 80vh;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+        
+        .error {
+            background: #fee;
+            border: 2px solid #fcc;
+            border-radius: 8px;
+            padding: 20px;
+            color: #c33;
+            margin: 20px 0;
+        }
+        
+        .content {
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        .content h1 {
+            color: #667eea;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            font-size: 2em;
+        }
+        
+        .content h2 {
+            color: #764ba2;
+            margin: 25px 0 15px 0;
+            font-size: 1.6em;
+        }
+        
+        .content h3 {
+            color: #555;
+            margin: 20px 0 10px 0;
+            font-size: 1.3em;
+        }
+        
+        .content h4 {
+            color: #666;
+            margin: 15px 0 10px 0;
+            font-size: 1.1em;
+        }
+        
+        .content p {
+            margin: 15px 0;
+        }
+        
+        .content ul, .content ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        .content li {
+            margin: 8px 0;
+        }
+        
+        .content code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+        
+        .content pre {
+            background: #2d2d2d;
+            color: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        .content pre code {
+            background: transparent;
+            color: #f8f8f8;
+            padding: 0;
+        }
+        
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .content table th,
+        .content table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .content table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .content table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .content blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 20px;
+            margin: 20px 0;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .content a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .content a:hover {
+            text-decoration: underline;
+        }
+        
+        .content hr {
+            border: none;
+            border-top: 2px solid #e0e0e0;
+            margin: 30px 0;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 24px;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+        }
+        
+        .back-to-top:hover {
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .file-selector select {
+                min-width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            .file-selector button {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 Remote Jobs Coaching - Playbook Viewer</h1>
+        <div class="file-selector">
+            <select id="fileSelect">
+                <option value="">Select a playbook...</option>
+                <optgroup label="Core Systems">
+                    <option value="webinar-funnel-playbook.md">Webinar Funnel Playbook (61KB)</option>
+                    <option value="remote-jobs-email-playbook.md">Email Sequences Playbook (105KB)</option>
+                    <option value="whatsapp-automation-playbook.md">WhatsApp Automation (42KB)</option>
+                    <option value="whatsapp-quick-templates.md">WhatsApp Templates (9KB)</option>
+                    <option value="whatsapp-implementation-checklist.md">WhatsApp Implementation (13KB)</option>
+                    <option value="remote-jobs-content-playbook.md">Content Strategy (96KB)</option>
+                </optgroup>
+                <optgroup label="Sales & Offers">
+                    <option value="ELITE_SALES_PLAYBOOK.md">Elite Sales Playbook (101KB)</option>
+                    <option value="ULTIMATE_OFFER_PLAYBOOK.md">Ultimate Offer Structure (103KB)</option>
+                    <option value="premium-lead-generation-playbook.md">Premium Lead Generation (93KB)</option>
+                    <option value="templates-and-scripts.md">Templates & Scripts (31KB)</option>
+                </optgroup>
+                <optgroup label="Optimization & Research">
+                    <option value="funnel-optimization-playbook.md">Funnel Optimization (114KB)</option>
+                    <option value="competitive-analysis-remote-jobs-international-placement.md">Competitive Analysis (51KB)</option>
+                </optgroup>
+                <optgroup label="Execution & Operations">
+                    <option value="90-day-remote-jobs-coaching-launch-playbook.md">90-Day Launch Timeline (117KB)</option>
+                    <option value="remote-jobs-coaching-tech-playbook.md">Technical Setup Guide (89KB)</option>
+                    <option value="operations-playbook/README.md">Operations Playbook - README (12KB)</option>
+                    <option value="operations-playbook/01-systems-workflows.md">Operations - Systems & Workflows (87KB)</option>
+                </optgroup>
+                <optgroup label="Other">
+                    <option value="MASTER_INDEX.md">Master Index (Full Overview)</option>
+                </optgroup>
+            </select>
+            <button onclick="loadSelectedFile()">Load Playbook</button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div id="content" class="content">
+            <div class="loading">
+                <h2>👋 Welcome to the Playbook Viewer</h2>
+                <p>Select a playbook from the dropdown above to view its contents.</p>
+                <p><strong>Total: 12 Complete Playbooks | 1,012KB+ Documentation</strong></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</div>
+    
+    <script>
+        const fileSelect = document.getElementById('fileSelect');
+        const contentDiv = document.getElementById('content');
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        // Show/hide back to top button
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        async function loadSelectedFile() {
+            const filename = fileSelect.value;
+            if (!filename) {
+                alert('Please select a playbook first');
+                return;
+            }
+            
+            contentDiv.innerHTML = '<div class="loading"><p>Loading playbook...</p></div>';
+            
+            try {
+                const response = await fetch(`/api/read-file?path=/data/workspace/${filename}`);
+                
+                if (!response.ok) {
+                    throw new Error(`Failed to load file: ${response.statusText}`);
+                }
+                
+                const markdown = await response.text();
+                const html = marked.parse(markdown);
+                contentDiv.innerHTML = html;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+            } catch (error) {
+                contentDiv.innerHTML = `
+                    <div class="error">
+                        <h3>⚠️ Error Loading Playbook</h3>
+                        <p>${error.message}</p>
+                        <p><strong>Alternative:</strong> You can download the files directly:</p>
+                        <ul>
+                            <li>All files are located in <code>/data/workspace/</code></li>
+                            <li>Use the file browser or download them via the terminal</li>
+                            <li>Or view them locally with any markdown reader</li>
+                        </ul>
+                    </div>
+                `;
+            }
+        }
+        
+        // Allow Enter key to load
+        fileSelect.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                loadSelectedFile();
+            }
+        });
+    </script>
+</body>
+</html>

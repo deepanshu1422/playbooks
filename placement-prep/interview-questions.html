@@ -1,0 +1,3383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Questions Bank | Indian Placement Prep</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            background: #f7fafc;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-title {
+            color: white;
+            font-size: 1.4em;
+            font-weight: 700;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            padding: 10px 24px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateX(-4px);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 40px 80px 40px;
+        }
+        
+        .content {
+            background: white;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            color: #1a202c;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 20px;
+        }
+        
+        h2 {
+            font-size: 2em;
+            color: #2d3748;
+            margin: 50px 0 20px 0;
+            border-left: 6px solid #667eea;
+            padding-left: 20px;
+        }
+        
+        h3 {
+            font-size: 1.5em;
+            color: #4a5568;
+            margin: 35px 0 15px 0;
+        }
+        
+        h4 {
+            font-size: 1.2em;
+            color: #718096;
+            margin: 25px 0 12px 0;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            color: #4a5568;
+        }
+        
+        ul, ol {
+            margin: 20px 0 20px 30px;
+        }
+        
+        li {
+            margin: 10px 0;
+            color: #4a5568;
+        }
+        
+        code {
+            background: #edf2f7;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #e53e3e;
+        }
+        
+        pre {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        pre code {
+            background: none;
+            color: #e2e8f0;
+            padding: 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #667eea;
+            padding: 15px 25px;
+            margin: 25px 0;
+            background: #f7fafc;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        tr:hover {
+            background: #f7fafc;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        
+        a:hover {
+            border-bottom-color: #667eea;
+        }
+        
+        strong {
+            color: #2d3748;
+            font-weight: 700;
+        }
+        
+        hr {
+            border: none;
+            border-top: 2px solid #e2e8f0;
+            margin: 40px 0;
+        }
+        
+        .toc {
+            background: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .toc h2 {
+            margin-top: 0;
+            border: none;
+            padding-left: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .content {
+                padding: 30px 25px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.6em;
+            }
+            
+            .nav-container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-title">🎯 Interview Questions Bank</div>
+            <a href="index.html" class="back-link">← Back to Index</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="content">
+            <h1>🏢 Company-Wise Interview Questions Bank</h1>
+<h2>Complete Guide for Indian Campus Placements &amp; Off-Campus Hiring</h2>
+<p><strong>Last Updated:</strong> February 2026<br><strong>Target Audience:</strong> Engineering Students &amp; Professionals in India<br><strong>Coverage:</strong> 15+ Top Companies | 1000+ Questions | Real Interview Experiences</p>
+<hr>
+<h2>📋 Table of Contents</h2>
+<ol>
+<li><a href="#amazon">Amazon</a></li>
+<li><a href="#google">Google</a></li>
+<li><a href="#microsoft">Microsoft</a></li>
+<li><a href="#flipkart">Flipkart</a></li>
+<li><a href="#walmart">Walmart</a></li>
+<li><a href="#adobe">Adobe</a></li>
+<li><a href="#oracle">Oracle</a></li>
+<li><a href="#salesforce">Salesforce</a></li>
+<li><a href="#goldman-sachs">Goldman Sachs</a></li>
+<li><a href="#tcs">TCS</a></li>
+<li><a href="#infosys">Infosys</a></li>
+<li><a href="#wipro">Wipro</a></li>
+<li><a href="#accenture">Accenture</a></li>
+<li><a href="#cognizant">Cognizant</a></li>
+<li><a href="#hcl-technologies">HCL Technologies</a></li>
+</ol>
+<hr>
+<h1>Amazon</h1>
+<h2>Interview Process Overview</h2>
+<ul>
+<li><strong>Rounds:</strong> 4-5 rounds</li>
+<li><strong>Duration:</strong> 3-4 hours total</li>
+<li><strong>Focus:</strong> Leadership Principles, DSA (Heavy), System Design (SDE-2+), Behavioral</li>
+<li><strong>Coding Platform:</strong> Amazon Chime, HackerRank, or CoderPad</li>
+<li><strong>Common for:</strong> SDE-1, SDE-2, Support Engineer roles</li>
+</ul>
+<h2>🎯 Common DSA Patterns Asked</h2>
+<h3>Pattern Frequency (High to Low)</h3>
+<ol>
+<li><strong>Arrays &amp; Strings</strong> (35%)</li>
+<li><strong>Trees &amp; Graphs</strong> (25%)</li>
+<li><strong>Dynamic Programming</strong> (15%)</li>
+<li><strong>Linked Lists</strong> (10%)</li>
+<li><strong>Heaps &amp; Priority Queues</strong> (8%)</li>
+<li><strong>Sliding Window</strong> (7%)</li>
+</ol>
+<hr>
+<h2>💻 DSA Questions by Difficulty</h2>
+<h3>Easy Questions</h3>
+<h4>1. Two Sum</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> Arrays, Hash Map</li>
+<li><strong>Asked in:</strong> SDE-1, Support Engineer</li>
+<li><strong>Solution Approach:</strong> Use hash map to store complement</li>
+<li><strong>Campus Experience:</strong> &quot;Asked in IIT Delhi campus drive 2025, had to optimize from O(n²) to O(n)&quot;</li>
+</ul>
+<h4>2. Valid Parentheses</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> Stack</li>
+<li><strong>Asked in:</strong> SDE-1 Online Assessment</li>
+<li><strong>Key Point:</strong> Stack-based approach, check matching pairs</li>
+</ul>
+<h4>3. Merge Two Sorted Lists</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> Linked List</li>
+<li><strong>Asked in:</strong> Phone Screen Round</li>
+<li><strong>Follow-up:</strong> &quot;What if you had K sorted lists?&quot;</li>
+</ul>
+<h4>4. Best Time to Buy and Sell Stock</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> Arrays, Greedy</li>
+<li><strong>Asked in:</strong> SDE-1 F2F Round 1</li>
+<li><strong>Campus:</strong> VIT Vellore 2025</li>
+</ul>
+<h4>5. Binary Search</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> Binary Search</li>
+<li><strong>Asked in:</strong> Online Assessment</li>
+<li><strong>Variations:</strong> Search in rotated array, find peak element</li>
+</ul>
+<hr>
+<h3>Medium Questions</h3>
+<h4>1. LRU Cache</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Hash Map + Doubly Linked List</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2 (Very Common)</li>
+<li><strong>Campus Experience:</strong> &quot;Asked in NIT Trichy 2024, had to implement get() and put() in O(1)&quot;</li>
+<li><strong>Follow-up:</strong> Implement LFU Cache</li>
+<li><strong>Key Insight:</strong> Use OrderedDict in Python or custom doubly linked list + hash map</li>
+</ul>
+<h4>2. Number of Islands</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Graph, DFS/BFS</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2</li>
+<li><strong>Campus:</strong> BITS Pilani 2025</li>
+<li><strong>Variations:</strong> Number of distinct islands, max area of island</li>
+</ul>
+<h4>3. Longest Substring Without Repeating Characters</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Sliding Window, Hash Map</li>
+<li><strong>Asked in:</strong> SDE-1 Phone Screen</li>
+<li><strong>Campus:</strong> IIT Bombay 2024</li>
+<li><strong>Key Pattern:</strong> Two-pointer sliding window</li>
+</ul>
+<h4>4. Subarray Sum Equals K</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Arrays, Prefix Sum, Hash Map</li>
+<li><strong>Asked in:</strong> SDE-1 Round 2</li>
+<li><strong>Campus Experience:</strong> &quot;Had to explain the prefix sum approach clearly&quot;</li>
+</ul>
+<h4>5. Clone Graph</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Graph, DFS/BFS, Hash Map</li>
+<li><strong>Asked in:</strong> SDE-2 Round 1</li>
+</ul>
+<h4>6. Word Break</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Dynamic Programming, BFS</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2</li>
+<li><strong>Follow-up:</strong> Return all possible sentences</li>
+</ul>
+<h4>7. Product of Array Except Self</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Arrays, Prefix Product</li>
+<li><strong>Asked in:</strong> SDE-1 OA</li>
+<li><strong>Constraint:</strong> Without using division, O(n) time</li>
+</ul>
+<h4>8. Rotting Oranges</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> BFS, Matrix</li>
+<li><strong>Asked in:</strong> SDE-1 Round 1</li>
+<li><strong>Campus:</strong> IIIT Hyderabad 2025</li>
+</ul>
+<h4>9. Top K Frequent Elements</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Hash Map, Heap, Bucket Sort</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2</li>
+<li><strong>Optimization:</strong> O(n) solution using bucket sort</li>
+</ul>
+<h4>10. Binary Tree Level Order Traversal</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Tree, BFS</li>
+<li><strong>Asked in:</strong> SDE-1 (Very Common)</li>
+<li><strong>Variations:</strong> Zigzag traversal, right side view</li>
+</ul>
+<h4>11. Copy List with Random Pointer</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Linked List, Hash Map</li>
+<li><strong>Asked in:</strong> SDE-2 Round 1</li>
+<li><strong>Campus:</strong> IIT Kanpur 2024</li>
+</ul>
+<h4>12. Meeting Rooms II</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Intervals, Heap</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2</li>
+<li><strong>Key:</strong> Sort by start time, use min-heap for end times</li>
+</ul>
+<h4>13. Design Hit Counter</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Design, Queue</li>
+<li><strong>Asked in:</strong> SDE-2 Round 2</li>
+<li><strong>Campus Experience:</strong> &quot;Had to handle concurrent requests&quot;</li>
+</ul>
+<h4>14. Course Schedule (Cycle Detection)</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Graph, Topological Sort</li>
+<li><strong>Asked in:</strong> SDE-1 Round 2</li>
+</ul>
+<h4>15. Longest Palindromic Substring</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> String, Dynamic Programming</li>
+<li><strong>Asked in:</strong> SDE-1 Phone Screen</li>
+<li><strong>Campus:</strong> NIT Surathkal 2025</li>
+</ul>
+<hr>
+<h3>Hard Questions</h3>
+<h4>1. Merge K Sorted Lists</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Heap, Divide &amp; Conquer</li>
+<li><strong>Asked in:</strong> SDE-2, SDE-3</li>
+<li><strong>Campus:</strong> IIT Madras 2024</li>
+<li><strong>Key:</strong> Use min-heap of size K</li>
+</ul>
+<h4>2. Trapping Rain Water</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Arrays, Two Pointers, Stack</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2</li>
+<li><strong>Campus Experience:</strong> &quot;Started with brute force, optimized to O(n) using two pointers&quot;</li>
+</ul>
+<h4>3. Word Ladder</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Graph, BFS</li>
+<li><strong>Asked in:</strong> SDE-2 Round 2</li>
+<li><strong>Variation:</strong> Return all shortest transformation sequences</li>
+</ul>
+<h4>4. Median of Two Sorted Arrays</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Binary Search</li>
+<li><strong>Asked in:</strong> SDE-2, SDE-3</li>
+<li><strong>Campus:</strong> IIT Kharagpur 2025</li>
+<li><strong>Key:</strong> Binary search on the smaller array</li>
+</ul>
+<h4>5. Longest Valid Parentheses</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> String, Stack, DP</li>
+<li><strong>Asked in:</strong> SDE-2 Round 1</li>
+</ul>
+<h4>6. Regular Expression Matching</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Dynamic Programming, Recursion</li>
+<li><strong>Asked in:</strong> SDE-2, SDE-3</li>
+<li><strong>Simplification:</strong> Sometimes asked without &#39;*&#39; operator</li>
+</ul>
+<h4>7. Alien Dictionary</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Graph, Topological Sort</li>
+<li><strong>Asked in:</strong> SDE-2 Round 2</li>
+<li><strong>Campus:</strong> IIIT Bangalore 2024</li>
+</ul>
+<h4>8. Design In-Memory File System</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Design, Trie, Hash Map</li>
+<li><strong>Asked in:</strong> SDE-2 System Design + Coding</li>
+</ul>
+<hr>
+<h2>🏗️ System Design Questions</h2>
+<h3>Asked for SDE-2 and Above</h3>
+<h4>1. Design URL Shortener (like Bit.ly)</h4>
+<ul>
+<li><strong>Frequency:</strong> Very High</li>
+<li><strong>Focus:</strong> Base62 encoding, database schema, caching</li>
+<li><strong>Campus:</strong> IIT Delhi 2024 (SDE-2)</li>
+<li><strong>Key Topics:</strong> Hash collision, custom URL support, analytics</li>
+</ul>
+<h4>2. Design Amazon Prime Video</h4>
+<ul>
+<li><strong>Complexity:</strong> High</li>
+<li><strong>Focus:</strong> CDN, video encoding, adaptive bitrate streaming</li>
+<li><strong>Components:</strong> User service, video service, CDN, recommendation engine</li>
+</ul>
+<h4>3. Design Rate Limiter</h4>
+<ul>
+<li><strong>Frequency:</strong> High</li>
+<li><strong>Focus:</strong> Token bucket, leaky bucket algorithms</li>
+<li><strong>Campus Experience:</strong> &quot;Asked to implement distributed rate limiting&quot;</li>
+</ul>
+<h4>4. Design Amazon Cart System</h4>
+<ul>
+<li><strong>Complexity:</strong> Medium</li>
+<li><strong>Focus:</strong> Consistency, cart merge, session management</li>
+<li><strong>Key:</strong> Handle concurrent updates, deal abandoned carts</li>
+</ul>
+<h4>5. Design Notification Service</h4>
+<ul>
+<li><strong>Frequency:</strong> Medium</li>
+<li><strong>Focus:</strong> Push notifications, email, SMS</li>
+<li><strong>Components:</strong> Queue (SQS), fan-out pattern, priority handling</li>
+</ul>
+<h4>6. Design Amazon Inventory Management System</h4>
+<ul>
+<li><strong>Complexity:</strong> High</li>
+<li><strong>Focus:</strong> Real-time inventory tracking, reservations</li>
+<li><strong>Key:</strong> Handle race conditions, distributed transactions</li>
+</ul>
+<h4>7. Design Search Autocomplete</h4>
+<ul>
+<li><strong>Frequency:</strong> Medium</li>
+<li><strong>Focus:</strong> Trie, caching, ranking</li>
+<li><strong>Campus:</strong> IIT Bombay 2025 (SDE-2)</li>
+</ul>
+<h4>8. Design Logging System (like CloudWatch)</h4>
+<ul>
+<li><strong>Complexity:</strong> High</li>
+<li><strong>Focus:</strong> Log aggregation, querying, retention</li>
+<li><strong>Components:</strong> Kafka, Elasticsearch, S3</li>
+</ul>
+<hr>
+<h2>💾 OS &amp; DBMS Concepts</h2>
+<h3>Operating Systems</h3>
+<h4>Frequently Asked Topics</h4>
+<ol>
+<li><p><strong>Process vs Thread</strong></p>
+<ul>
+<li><strong>Question:</strong> &quot;Explain the difference and when to use each&quot;</li>
+<li><strong>Amazon Context:</strong> Multi-threading in their services</li>
+<li><strong>Campus:</strong> Asked in 80% of interviews</li>
+</ul>
+</li>
+<li><p><strong>Deadlock</strong></p>
+<ul>
+<li><strong>Questions:</strong><ul>
+<li>&quot;Four conditions for deadlock&quot;</li>
+<li>&quot;How does Amazon handle deadlock in distributed systems?&quot;</li>
+<li>&quot;Banker&#39;s algorithm explanation&quot;</li>
+</ul>
+</li>
+<li><strong>Campus:</strong> NIT Warangal 2024</li>
+</ul>
+</li>
+<li><p><strong>Mutex vs Semaphore</strong></p>
+<ul>
+<li><strong>Question:</strong> &quot;When would you use one over the other?&quot;</li>
+<li><strong>Real scenario:</strong> &quot;Design a thread-safe queue&quot;</li>
+</ul>
+</li>
+<li><p><strong>Virtual Memory &amp; Paging</strong></p>
+<ul>
+<li><strong>Questions:</strong><ul>
+<li>&quot;Explain page replacement algorithms&quot;</li>
+<li>&quot;What is thrashing and how to prevent it?&quot;</li>
+</ul>
+</li>
+<li><strong>Campus:</strong> IIIT Delhi 2025</li>
+</ul>
+</li>
+<li><p><strong>Context Switching</strong></p>
+<ul>
+<li><strong>Question:</strong> &quot;What happens during context switch? Cost?&quot;</li>
+<li><strong>Follow-up:</strong> &quot;How to minimize context switches?&quot;</li>
+</ul>
+</li>
+<li><p><strong>Inter-Process Communication (IPC)</strong></p>
+<ul>
+<li><strong>Topics:</strong> Shared memory, message queues, pipes</li>
+<li><strong>Amazon Context:</strong> Microservices communication</li>
+</ul>
+</li>
+</ol>
+<h3>Database Management Systems</h3>
+<h4>SQL Questions</h4>
+<ol>
+<li><strong>Find Second Highest Salary</strong></li>
+</ol>
+<pre><code class="language-sql">-- Question: Write query for 2nd highest salary from Employee table
+-- Campus: Asked in 60% of interviews
+
+-- Solution 1: Using LIMIT OFFSET
+SELECT DISTINCT salary 
+FROM Employee 
+ORDER BY salary DESC 
+LIMIT 1 OFFSET 1;
+
+-- Solution 2: Using subquery
+SELECT MAX(salary) 
+FROM Employee 
+WHERE salary &lt; (SELECT MAX(salary) FROM Employee);
+</code></pre>
+<ol start="2">
+<li><strong>Department-wise Highest Salary</strong></li>
+</ol>
+<pre><code class="language-sql">-- Question: Find employees with highest salary in each department
+-- Campus: IIT Roorkee 2024
+
+SELECT e.department_id, e.name, e.salary
+FROM Employee e
+WHERE e.salary = (
+    SELECT MAX(salary) 
+    FROM Employee 
+    WHERE department_id = e.department_id
+);
+</code></pre>
+<ol start="3">
+<li><strong>Find Duplicate Emails</strong></li>
+</ol>
+<pre><code class="language-sql">-- Question: Find all duplicate emails in Person table
+-- Campus: VIT 2025
+
+SELECT email, COUNT(*) as count
+FROM Person
+GROUP BY email
+HAVING COUNT(*) &gt; 1;
+</code></pre>
+<h4>Conceptual Questions</h4>
+<ol>
+<li><p><strong>ACID Properties</strong></p>
+<ul>
+<li><strong>Question:</strong> &quot;Explain with examples&quot;</li>
+<li><strong>Amazon Context:</strong> DynamoDB consistency models</li>
+<li><strong>Campus Experience:</strong> &quot;Had to explain eventual consistency&quot;</li>
+</ul>
+</li>
+<li><p><strong>Indexing</strong></p>
+<ul>
+<li><strong>Questions:</strong><ul>
+<li>&quot;When would you use B-tree vs Hash index?&quot;</li>
+<li>&quot;Clustered vs Non-clustered index&quot;</li>
+<li>&quot;Impact on INSERT performance&quot;</li>
+</ul>
+</li>
+<li><strong>Campus:</strong> BITS Pilani 2024</li>
+</ul>
+</li>
+<li><p><strong>Normalization</strong></p>
+<ul>
+<li><strong>Question:</strong> &quot;Explain 1NF to 3NF with examples&quot;</li>
+<li><strong>Follow-up:</strong> &quot;When would you denormalize?&quot;</li>
+<li><strong>Amazon Context:</strong> NoSQL vs SQL trade-offs</li>
+</ul>
+</li>
+<li><p><strong>Transactions &amp; Isolation Levels</strong></p>
+<ul>
+<li><strong>Questions:</strong><ul>
+<li>&quot;Explain READ COMMITTED vs REPEATABLE READ&quot;</li>
+<li>&quot;What is dirty read, phantom read?&quot;</li>
+</ul>
+</li>
+<li><strong>Campus:</strong> IIT Guwahati 2025</li>
+</ul>
+</li>
+<li><p><strong>Database Sharding</strong></p>
+<ul>
+<li><strong>Question:</strong> &quot;How to shard user database? Pros and cons?&quot;</li>
+<li><strong>Amazon Context:</strong> DynamoDB partition keys</li>
+</ul>
+</li>
+<li><p><strong>CAP Theorem</strong></p>
+<ul>
+<li><strong>Question:</strong> &quot;Explain with examples of Amazon services&quot;</li>
+<li><strong>Example:</strong> DynamoDB (AP), RDS (CA)</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>⚛️ React &amp; Frontend Questions</h2>
+<h3>React Concepts</h3>
+<h4>1. Virtual DOM</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Explain Virtual DOM and reconciliation process&quot;</li>
+<li><strong>Follow-up:</strong> &quot;How does React decide what to re-render?&quot;</li>
+<li><strong>Campus:</strong> Asked for Frontend roles</li>
+</ul>
+<h4>2. Hooks</h4>
+<ul>
+<li><strong>Questions:</strong><ul>
+<li>&quot;Explain useState vs useEffect&quot;</li>
+<li>&quot;What is useCallback and when to use it?&quot;</li>
+<li>&quot;Custom hooks - create one for API call&quot;</li>
+</ul>
+</li>
+<li><strong>Campus:</strong> IIT Delhi 2025 (Frontend SDE)</li>
+</ul>
+<h4>3. State Management</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Redux vs Context API - when to use which?&quot;</li>
+<li><strong>Follow-up:</strong> &quot;Implement a simple Redux store&quot;</li>
+<li><strong>Amazon Context:</strong> Managing cart state</li>
+</ul>
+<h4>4. Component Lifecycle</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Explain lifecycle methods and their hooks equivalent&quot;</li>
+<li><strong>Common:</strong> componentDidMount → useEffect</li>
+</ul>
+<h4>5. Performance Optimization</h4>
+<ul>
+<li><strong>Questions:</strong><ul>
+<li>&quot;How to optimize re-renders?&quot;</li>
+<li>&quot;Explain React.memo, useMemo, useCallback&quot;</li>
+<li>&quot;Code splitting and lazy loading&quot;</li>
+</ul>
+</li>
+</ul>
+<h3>Frontend Coding Questions</h3>
+<h4>1. Implement Debounce</h4>
+<pre><code class="language-javascript">// Question: Implement debounce function for search box
+// Campus: NIT Surathkal 2024
+
+function debounce(func, delay) {
+    let timeoutId;
+    return function(...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() =&gt; {
+            func.apply(this, args);
+        }, delay);
+    };
+}
+</code></pre>
+<h4>2. Implement Infinite Scroll</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Build infinite scroll component in React&quot;</li>
+<li><strong>Key:</strong> Intersection Observer API, pagination</li>
+<li><strong>Campus:</strong> IIIT Hyderabad 2025</li>
+</ul>
+<h4>3. Auto-suggest Component</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Create autocomplete search box&quot;</li>
+<li><strong>Features:</strong> Debouncing, keyboard navigation, API integration</li>
+<li><strong>Campus Experience:</strong> &quot;Had to handle edge cases like empty results&quot;</li>
+</ul>
+<h4>4. Shopping Cart Component</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Implement add to cart, update quantity, remove&quot;</li>
+<li><strong>State:</strong> Local state vs Redux</li>
+<li><strong>Amazon Context:</strong> Actual cart functionality</li>
+</ul>
+<h3>JavaScript Questions</h3>
+<h4>1. Closures</h4>
+<pre><code class="language-javascript">// Question: Explain closures with example
+// Campus: Asked in 70% of frontend interviews
+
+// Common trap question:
+for (var i = 0; i &lt; 3; i++) {
+    setTimeout(function() {
+        console.log(i);  // What prints?
+    }, 100);
+}
+// Follow-up: How to fix it?
+</code></pre>
+<h4>2. Promises vs Async/Await</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Explain difference and error handling&quot;</li>
+<li><strong>Coding:</strong> &quot;Convert promise chain to async/await&quot;</li>
+</ul>
+<h4>3. Event Delegation</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Implement event delegation for dynamic list&quot;</li>
+<li><strong>Use case:</strong> Product listing page</li>
+</ul>
+<h4>4. Prototype &amp; Inheritance</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Explain prototypal inheritance&quot;</li>
+<li><strong>Coding:</strong> &quot;Implement inheritance without class keyword&quot;</li>
+</ul>
+<h3>CSS Questions</h3>
+<h4>1. Flexbox vs Grid</h4>
+<ul>
+<li><strong>Question:</strong> &quot;When to use which? Build a layout&quot;</li>
+<li><strong>Campus:</strong> VIT 2024</li>
+</ul>
+<h4>2. CSS Specificity</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Calculate specificity, explain !important&quot;</li>
+</ul>
+<h4>3. Responsive Design</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Create mobile-first responsive navbar&quot;</li>
+<li><strong>Tools:</strong> Media queries, viewport units</li>
+</ul>
+<hr>
+<h2>🤝 HR &amp; Behavioral Questions</h2>
+<h3>Leadership Principles Based</h3>
+<p>Amazon heavily emphasizes their 16 Leadership Principles. Every question ties back to these.</p>
+<h4>1. Customer Obsession</h4>
+<p><strong>Question:</strong> &quot;Tell me about a time when you went above and beyond for a customer&quot;</p>
+<ul>
+<li><strong>STAR Format:</strong> Situation, Task, Action, Result</li>
+<li><strong>Campus Tip:</strong> Use project or internship examples</li>
+<li><strong>Example Answer Structure:</strong><ul>
+<li>Situation: &quot;During my internship at XYZ...&quot;</li>
+<li>Task: &quot;Customer reported slow page load...&quot;</li>
+<li>Action: &quot;Analyzed, optimized queries, reduced load time by 60%&quot;</li>
+<li>Result: &quot;Customer satisfaction improved, got appreciation&quot;</li>
+</ul>
+</li>
+</ul>
+<h4>2. Ownership</h4>
+<p><strong>Question:</strong> &quot;Describe a time when you took ownership beyond your role&quot;</p>
+<ul>
+<li><strong>Campus Experience:</strong> &quot;Used college fest technical lead example&quot;</li>
+</ul>
+<h4>3. Invent and Simplify</h4>
+<p><strong>Question:</strong> &quot;Tell me about a time you innovated to solve a problem&quot;</p>
+<ul>
+<li><strong>Good Examples:</strong> Automated manual processes, created tools</li>
+</ul>
+<h4>4. Dive Deep</h4>
+<p><strong>Question:</strong> &quot;Describe a situation where you had to deep dive into a problem&quot;</p>
+<ul>
+<li><strong>Technical Example:</strong> Debugging production issue</li>
+</ul>
+<h4>5. Bias for Action</h4>
+<p><strong>Question:</strong> &quot;Tell me about a time when you had to make a quick decision&quot;</p>
+<ul>
+<li><strong>Key:</strong> Calculated risks, not reckless</li>
+</ul>
+<h4>6. Earn Trust</h4>
+<p><strong>Question:</strong> &quot;How do you build trust with team members?&quot;</p>
+<ul>
+<li><strong>Campus:</strong> Cross-functional project examples</li>
+</ul>
+<h4>7. Have Backbone; Disagree and Commit</h4>
+<p><strong>Question:</strong> &quot;Tell me about a time you disagreed with a team member/manager&quot;</p>
+<ul>
+<li><strong>Important:</strong> Show respectful disagreement and commitment to final decision</li>
+</ul>
+<h3>General HR Questions</h3>
+<h4>1. &quot;Why Amazon?&quot;</h4>
+<ul>
+<li><strong>Good Answers:</strong><ul>
+<li>Leadership principles alignment</li>
+<li>Innovation culture</li>
+<li>Customer-centric approach</li>
+<li>Learning opportunities</li>
+</ul>
+</li>
+<li><strong>Avoid:</strong> Generic answers about company size</li>
+</ul>
+<h4>2. &quot;Why should we hire you?&quot;</h4>
+<ul>
+<li><strong>Campus Tip:</strong> Tie skills to job description</li>
+<li><strong>Structure:</strong> Skills + Passion + Cultural fit</li>
+</ul>
+<h4>3. &quot;Tell me about yourself&quot;</h4>
+<ul>
+<li><strong>Format:</strong> Present → Past → Future</li>
+<li><strong>Duration:</strong> 1-2 minutes</li>
+<li><strong>Campus:</strong> Keep it relevant to the role</li>
+</ul>
+<h4>4. &quot;Biggest Strength/Weakness?&quot;</h4>
+<ul>
+<li><strong>Strength:</strong> Back with examples</li>
+<li><strong>Weakness:</strong> Show self-awareness and improvement efforts</li>
+<li><strong>Avoid:</strong> &quot;I&#39;m a perfectionist&quot; cliché</li>
+</ul>
+<h4>5. &quot;Describe a conflict with a team member&quot;</h4>
+<ul>
+<li><strong>Key:</strong> Show conflict resolution skills</li>
+<li><strong>Focus:</strong> Communication, empathy, outcome</li>
+</ul>
+<h4>6. &quot;Where do you see yourself in 5 years?&quot;</h4>
+<ul>
+<li><strong>Align:</strong> With career progression at Amazon</li>
+<li><strong>Avoid:</strong> &quot;I want to do MBA&quot; (red flag)</li>
+</ul>
+<h4>7. &quot;What are your salary expectations?&quot;</h4>
+<ul>
+<li><strong>Research:</strong> Glassdoor, AmbitionBox data for India</li>
+<li><strong>Deflect:</strong> &quot;What&#39;s the budget for this role?&quot;</li>
+<li><strong>Campus:</strong> CTC ranges vary: SDE-1 (20-30 LPA), SDE-2 (40-60 LPA)</li>
+</ul>
+<h3>Questions to Ask Interviewer</h3>
+<ol>
+<li>&quot;What does a typical day look like for this role?&quot;</li>
+<li>&quot;What are the biggest challenges for this team?&quot;</li>
+<li>&quot;How do you measure success in this position?&quot;</li>
+<li>&quot;What&#39;s the team structure?&quot;</li>
+<li>&quot;What opportunities for learning and growth exist?&quot;</li>
+</ol>
+<hr>
+<h2>🧩 Aptitude &amp; Puzzles</h2>
+<h3>Logical Reasoning</h3>
+<h4>1. 100 Doors Problem</h4>
+<p><strong>Question:</strong> &quot;100 doors, 100 people. Person i toggles every ith door. Which doors are open?&quot;</p>
+<ul>
+<li><strong>Answer:</strong> Perfect squares (1, 4, 9, 16, 25, 36, 49, 64, 81, 100)</li>
+<li><strong>Reason:</strong> Perfect squares have odd number of divisors</li>
+<li><strong>Campus:</strong> IIT Bombay 2024</li>
+</ul>
+<h4>2. Bridge and Torch Problem</h4>
+<p><strong>Question:</strong> &quot;4 people need to cross bridge at night. Max 2 at a time. Times: 1, 2, 5, 10 min. Minimum time?&quot;</p>
+<ul>
+<li><strong>Answer:</strong> 17 minutes</li>
+<li><strong>Strategy:</strong> Fastest person shuttles vs. slowest go together</li>
+<li><strong>Campus:</strong> Asked in OA reasoning section</li>
+</ul>
+<h4>3. Burning Ropes</h4>
+<p><strong>Question:</strong> &quot;2 ropes, each burns in 60 minutes (non-uniform). Measure 45 minutes?&quot;</p>
+<ul>
+<li><strong>Answer:</strong> Light rope1 both ends + rope2 one end. When rope1 done (30 min), light rope2 other end (15 min more)</li>
+<li><strong>Campus:</strong> BITS Pilani 2025</li>
+</ul>
+<h4>4. Weighing Balls</h4>
+<p><strong>Question:</strong> &quot;12 balls, 1 defective (heavier/lighter). 3 weighings to find it and determine if heavier/lighter&quot;</p>
+<ul>
+<li><strong>Classic puzzle:</strong> Asked for analytical thinking</li>
+<li><strong>Campus:</strong> NIT Trichy 2024</li>
+</ul>
+<h3>Probability Questions</h3>
+<h4>1. Birthday Paradox</h4>
+<p><strong>Question:</strong> &quot;How many people in room for 50% chance of shared birthday?&quot;</p>
+<ul>
+<li><strong>Answer:</strong> 23 people</li>
+<li><strong>Campus:</strong> SDE-2 interview, testing probability understanding</li>
+</ul>
+<h4>2. Coin Toss Probability</h4>
+<p><strong>Question:</strong> &quot;Toss coin until 2 heads in a row. Expected number of tosses?&quot;</p>
+<ul>
+<li><strong>Answer:</strong> 6 tosses</li>
+<li><strong>Method:</strong> Markov chain / recursion</li>
+</ul>
+<h4>3. Defective Pill Bottle</h4>
+<p><strong>Question:</strong> &quot;10 bottles, 1 has defective pills (heavier by 1g). One weighing?&quot;</p>
+<ul>
+<li><strong>Answer:</strong> Take 1 pill from bottle1, 2 from bottle2, etc. Weigh total</li>
+<li><strong>Campus:</strong> IIT Kharagpur 2024</li>
+</ul>
+<h3>Estimation Questions</h3>
+<h4>1. &quot;How many Pizza orders on Amazon Prime in Delhi daily?&quot;</h4>
+<p><strong>Approach:</strong></p>
+<ul>
+<li>Delhi population: ~20 million</li>
+<li>Prime users: ~20% = 4 million</li>
+<li>Order frequency: 10% order weekly = 400K orders/week</li>
+<li>Daily: ~57K orders</li>
+<li><strong>Campus:</strong> SDE-2 interview testing estimation skills</li>
+</ul>
+<h4>2. &quot;Estimate revenue of Amazon India&quot;</h4>
+<p><strong>Approach:</strong></p>
+<ul>
+<li>Number of users, average order value, frequency</li>
+<li>Market share considerations</li>
+<li><strong>Key:</strong> Show structured thinking</li>
+</ul>
+<hr>
+<h2>📱 Real Campus Interview Experiences</h2>
+<h3>IIT Delhi - SDE-1 (2024)</h3>
+<p><strong>Round 1 (Online Assessment):</strong></p>
+<ul>
+<li>2 coding questions, 90 minutes</li>
+<li>Q1: Two Sum variation (Easy)</li>
+<li>Q2: LRU Cache (Medium)</li>
+<li>Cleared by 60% students</li>
+</ul>
+<p><strong>Round 2 (Technical Interview):</strong></p>
+<ul>
+<li>Duration: 60 minutes</li>
+<li>DSA: Number of Islands + variations</li>
+<li>OS: Deadlock explanation</li>
+<li>Behavioral: Customer Obsession example</li>
+<li>Result: 30% selected for next round</li>
+</ul>
+<p><strong>Round 3 (Technical Interview):</strong></p>
+<ul>
+<li>Duration: 45 minutes</li>
+<li>DSA: Design Hit Counter</li>
+<li>System Design: URL Shortener (brief)</li>
+<li>Behavioral: Ownership example</li>
+</ul>
+<p><strong>Round 4 (Bar Raiser):</strong></p>
+<ul>
+<li>Duration: 60 minutes</li>
+<li>Focus: 80% behavioral, 20% technical</li>
+<li>Deep dive into projects</li>
+<li>Leadership principles assessment</li>
+<li>Result: Offer for 30 LPA CTC</li>
+</ul>
+<h3>BITS Pilani - SDE-1 (2025)</h3>
+<p><strong>Online Assessment:</strong></p>
+<ul>
+<li>3 questions, 120 minutes</li>
+<li>Q1: Valid Parentheses (Easy)</li>
+<li>Q2: Clone Graph (Medium)</li>
+<li>Q3: Trapping Rain Water (Hard)</li>
+<li>Cutoff: 2/3 questions</li>
+</ul>
+<p><strong>Interview Experience:</strong>
+&quot;Interviewer was friendly. Started with resume discussion. Asked about my web app project in detail. Then moved to coding - Number of Islands. Had to explain DFS and BFS approaches. Follow-up was about scalability - what if the grid doesn&#39;t fit in memory? Discussed distributed approach. Then HR questions about handling pressure and team conflicts. Overall positive experience.&quot;</p>
+<h3>NIT Trichy - SDE-2 (2024)</h3>
+<p><strong>Phone Screen:</strong></p>
+<ul>
+<li>45 minutes</li>
+<li>LRU Cache implementation</li>
+<li>OS concepts (multithreading)</li>
+<li>Result: Selected for on-site</li>
+</ul>
+<p><strong>On-site (Virtual):</strong>
+<strong>Round 1:</strong> System design - Amazon Cart
+<strong>Round 2:</strong> DSA - Merge K Sorted Lists, Word Break
+<strong>Round 3:</strong> Behavioral - all leadership principles
+<strong>Round 4:</strong> Bar raiser - deep project discussion</p>
+<p><strong>Offer:</strong> 42 LPA CTC</p>
+<h3>VIT Vellore - Support Engineer (2025)</h3>
+<p><strong>Round 1 (Online Test):</strong></p>
+<ul>
+<li>Aptitude: 20 questions</li>
+<li>Technical MCQ: 30 questions (OS, Networks, DBMS)</li>
+<li>Coding: 2 easy questions</li>
+</ul>
+<p><strong>Round 2 (Technical):</strong></p>
+<ul>
+<li>Troubleshooting scenarios</li>
+<li>Basic DSA (easy level)</li>
+<li>Networking concepts</li>
+<li>Result: Offer for 18 LPA CTC</li>
+</ul>
+<hr>
+<h2>📊 Amazon India Salary Ranges (2024-2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Experience</th>
+<th>CTC Range (LPA)</th>
+<th>Campus/Off-Campus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SDE-1</td>
+<td>0-2 years</td>
+<td>28-35</td>
+<td>Campus</td>
+</tr>
+<tr>
+<td>SDE-1</td>
+<td>0-2 years</td>
+<td>20-28</td>
+<td>Off-Campus</td>
+</tr>
+<tr>
+<td>SDE-2</td>
+<td>2-5 years</td>
+<td>40-60</td>
+<td>Off-Campus</td>
+</tr>
+<tr>
+<td>SDE-3</td>
+<td>5-8 years</td>
+<td>70-100+</td>
+<td>Off-Campus</td>
+</tr>
+<tr>
+<td>Support Engineer</td>
+<td>0-2 years</td>
+<td>15-22</td>
+<td>Campus/Off-Campus</td>
+</tr>
+<tr>
+<td>Frontend SDE</td>
+<td>0-2 years</td>
+<td>25-32</td>
+<td>Campus</td>
+</tr>
+</tbody></table>
+<p><strong>Note:</strong> CTC includes base salary, joining bonus, RSUs (vesting over 4 years)</p>
+<hr>
+<h2>🎯 Preparation Strategy for Amazon</h2>
+<h3>For SDE-1 (Campus)</h3>
+<p><strong>Month 1-2: DSA Foundation</strong></p>
+<ul>
+<li>Arrays, Strings, Linked Lists</li>
+<li>Stacks, Queues</li>
+<li>Basic trees and graphs</li>
+<li>Target: 100 easy + 50 medium questions</li>
+</ul>
+<p><strong>Month 3: DSA Advanced</strong></p>
+<ul>
+<li>Dynamic Programming</li>
+<li>Advanced graph algorithms</li>
+<li>Focus on Amazon tagged questions on LeetCode</li>
+<li>Target: 100 medium + 20 hard questions</li>
+</ul>
+<p><strong>Month 4: System Design &amp; Behavioral</strong></p>
+<ul>
+<li>Read &quot;Designing Data-Intensive Applications&quot;</li>
+<li>Practice STAR format answers</li>
+<li>Mock interviews with peers</li>
+<li>Revise OS &amp; DBMS concepts</li>
+</ul>
+<h3>Key Resources</h3>
+<ol>
+<li><strong>LeetCode:</strong> Amazon company tag (600+ questions)</li>
+<li><strong>GeeksforGeeks:</strong> Company preparation</li>
+<li><strong>YouTube:</strong> Striver&#39;s SDE Sheet</li>
+<li><strong>Books:</strong> Cracking the Coding Interview</li>
+<li><strong>System Design:</strong> System Design Primer (GitHub)</li>
+</ol>
+<hr>
+<h1>Google</h1>
+<h2>Interview Process Overview</h2>
+<ul>
+<li><strong>Rounds:</strong> 5-6 rounds (2 phone screens + 4-5 on-site)</li>
+<li><strong>Duration:</strong> 6-8 weeks total process</li>
+<li><strong>Focus:</strong> DSA (Very Heavy), Problem-solving, Culture fit</li>
+<li><strong>Coding Platform:</strong> Google Docs (shared coding), Google Meet</li>
+<li><strong>Bar:</strong> Extremely high, low acceptance rate</li>
+<li><strong>Unique:</strong> &quot;Googleyness&quot; round</li>
+</ul>
+<h2>🎯 Common DSA Patterns Asked</h2>
+<h3>Pattern Frequency</h3>
+<ol>
+<li><strong>Arrays &amp; Strings</strong> (30%)</li>
+<li><strong>Graphs &amp; Trees</strong> (25%)</li>
+<li><strong>Dynamic Programming</strong> (20%)</li>
+<li><strong>Backtracking</strong> (10%)</li>
+<li><strong>Math &amp; Logic</strong> (10%)</li>
+<li><strong>System Design</strong> (5% - for L4+)</li>
+</ol>
+<hr>
+<h2>💻 DSA Questions by Difficulty</h2>
+<h3>Easy Questions</h3>
+<h4>1. Fizz Buzz</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> Logic</li>
+<li><strong>Asked in:</strong> Warmup question</li>
+<li><strong>Campus:</strong> Almost every interview starts here</li>
+</ul>
+<h4>2. Roman to Integer</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> String, Hash Map</li>
+<li><strong>Asked in:</strong> Phone Screen</li>
+<li><strong>Campus:</strong> IIT Kanpur 2024</li>
+</ul>
+<h4>3. Climbing Stairs</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> Dynamic Programming</li>
+<li><strong>Asked in:</strong> L3 Phone Screen</li>
+<li><strong>Follow-up:</strong> Variable step sizes</li>
+</ul>
+<h4>4. Reverse Linked List</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> Linked List</li>
+<li><strong>Asked in:</strong> On-site Round 1</li>
+<li><strong>Variations:</strong> Reverse in groups of K</li>
+</ul>
+<h4>5. Valid Palindrome</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> String, Two Pointers</li>
+<li><strong>Asked in:</strong> Warmup question</li>
+</ul>
+<hr>
+<h3>Medium Questions</h3>
+<h4>1. Word Search</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Backtracking, Matrix DFS</li>
+<li><strong>Asked in:</strong> L3, L4 (Very Common)</li>
+<li><strong>Campus:</strong> IIT Bombay 2025</li>
+<li><strong>Key:</strong> Backtracking with visited marking</li>
+<li><strong>Campus Experience:</strong> &quot;Had to optimize from exponential to pruned search&quot;</li>
+</ul>
+<h4>2. Longest Palindromic Substring</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> String, DP, Expand Around Center</li>
+<li><strong>Asked in:</strong> Phone Screen</li>
+<li><strong>Multiple Approaches:</strong> DP O(n²), Expand O(n²), Manacher&#39;s O(n)</li>
+</ul>
+<h4>3. Container With Most Water</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Arrays, Two Pointers</li>
+<li><strong>Asked in:</strong> L3 Interview</li>
+<li><strong>Campus:</strong> IIIT Hyderabad 2024</li>
+<li><strong>Key Insight:</strong> Move pointer with smaller height</li>
+</ul>
+<h4>4. Generate Parentheses</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Backtracking, Recursion</li>
+<li><strong>Asked in:</strong> Phone Screen, On-site</li>
+<li><strong>Campus Experience:</strong> &quot;Started with brute force, optimized with constraints&quot;</li>
+</ul>
+<h4>5. Decode Ways</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Dynamic Programming</li>
+<li><strong>Asked in:</strong> L3, L4</li>
+<li><strong>Campus:</strong> IIT Delhi 2025</li>
+<li><strong>Follow-up:</strong> Handle &#39;*&#39; wildcard character</li>
+</ul>
+<h4>6. Validate Binary Search Tree</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Tree, DFS</li>
+<li><strong>Asked in:</strong> Very Common</li>
+<li><strong>Trap:</strong> Not just checking node.left &lt; node &lt; node.right</li>
+</ul>
+<h4>7. Kth Largest Element in Array</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Heap, Quickselect</li>
+<li><strong>Asked in:</strong> Phone Screen</li>
+<li><strong>Multiple Solutions:</strong> Sort O(n log n), Heap O(n log k), Quickselect O(n)</li>
+</ul>
+<h4>8. Permutations</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Backtracking</li>
+<li><strong>Asked in:</strong> On-site</li>
+<li><strong>Variations:</strong> Permutations II (with duplicates)</li>
+</ul>
+<h4>9. Group Anagrams</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Hash Map, Sorting</li>
+<li><strong>Asked in:</strong> Phone Screen</li>
+<li><strong>Campus:</strong> NIT Surathkal 2024</li>
+</ul>
+<h4>10. Serialize and Deserialize Binary Tree</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium (Hard)</li>
+<li><strong>Topic:</strong> Tree, BFS/DFS</li>
+<li><strong>Asked in:</strong> L4, L5</li>
+<li><strong>Campus:</strong> IIT Madras 2024</li>
+<li><strong>Key:</strong> Handle null nodes properly</li>
+</ul>
+<h4>11. Minimum Window Substring</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium (Hard)</li>
+<li><strong>Topic:</strong> Sliding Window, Two Pointers</li>
+<li><strong>Asked in:</strong> L3, L4</li>
+<li><strong>Campus Experience:</strong> &quot;One of the hardest mediums, took 35 minutes&quot;</li>
+</ul>
+<h4>12. Task Scheduler</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Greedy, Heap, Math</li>
+<li><strong>Asked in:</strong> L3 Interview</li>
+<li><strong>Key:</strong> Calculate idle time efficiently</li>
+</ul>
+<h4>13. Pacific Atlantic Water Flow</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Graph, DFS/BFS, Matrix</li>
+<li><strong>Asked in:</strong> On-site Round 2</li>
+</ul>
+<h4>14. Implement Trie (Prefix Tree)</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Trie, Design</li>
+<li><strong>Asked in:</strong> Very Common</li>
+<li><strong>Follow-up:</strong> Add search with wildcard support</li>
+</ul>
+<h4>15. House Robber II</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Dynamic Programming</li>
+<li><strong>Asked in:</strong> L3 Interview</li>
+<li><strong>Twist:</strong> Houses in circle</li>
+</ul>
+<hr>
+<h3>Hard Questions</h3>
+<h4>1. Median of Two Sorted Arrays</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Binary Search</li>
+<li><strong>Asked in:</strong> L4, L5 (Very Common)</li>
+<li><strong>Campus:</strong> IIT Kharagpur 2024</li>
+<li><strong>Key:</strong> Binary search on smaller array, O(log(min(m,n)))</li>
+<li><strong>Campus Experience:</strong> &quot;Most asked hard question at Google India&quot;</li>
+</ul>
+<h4>2. Longest Valid Parentheses</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Stack, DP</li>
+<li><strong>Asked in:</strong> L4 On-site</li>
+<li><strong>Multiple Approaches:</strong> Stack O(n), DP O(n), Two-pass O(n)</li>
+</ul>
+<h4>3. Wildcard Matching</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Dynamic Programming, Greedy</li>
+<li><strong>Asked in:</strong> L4, L5</li>
+<li><strong>Similar:</strong> Regular Expression Matching</li>
+</ul>
+<h4>4. Word Ladder II</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> BFS, Backtracking</li>
+<li><strong>Asked in:</strong> L5 Interview</li>
+<li><strong>Extension:</strong> Return all shortest paths</li>
+</ul>
+<h4>5. Maximum Rectangle in Histogram</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Stack, Arrays</li>
+<li><strong>Asked in:</strong> L3, L4</li>
+<li><strong>Campus:</strong> IIT Bombay 2024</li>
+<li><strong>Follow-up:</strong> Maximal Rectangle in Binary Matrix</li>
+</ul>
+<h4>6. Sudoku Solver</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Backtracking</li>
+<li><strong>Asked in:</strong> L4 Interview</li>
+<li><strong>Campus:</strong> BITS Pilani 2025</li>
+<li><strong>Key:</strong> Efficient backtracking with constraint propagation</li>
+</ul>
+<h4>7. N-Queens</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Backtracking</li>
+<li><strong>Asked in:</strong> L3, L4</li>
+<li><strong>Variation:</strong> Count solutions instead of returning them</li>
+</ul>
+<h4>8. Binary Tree Maximum Path Sum</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Tree, DFS, Recursion</li>
+<li><strong>Asked in:</strong> L4 On-site</li>
+<li><strong>Tricky:</strong> Path can start and end at any node</li>
+</ul>
+<h4>9. Minimum Cost to Merge Stones</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Dynamic Programming</li>
+<li><strong>Asked in:</strong> L5 Interview</li>
+</ul>
+<h4>10. Burst Balloons</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Dynamic Programming</li>
+<li><strong>Asked in:</strong> L4 Interview</li>
+<li><strong>Campus:</strong> IIT Delhi 2024</li>
+<li><strong>Key:</strong> DP with reverse thinking</li>
+</ul>
+<hr>
+<h2>🏗️ System Design Questions</h2>
+<h3>Asked for L4 (SWE-II) and Above</h3>
+<h4>1. Design Google Search Autocomplete</h4>
+<ul>
+<li><strong>Frequency:</strong> Very High</li>
+<li><strong>Focus:</strong> Trie, caching, ranking algorithm</li>
+<li><strong>Scale:</strong> Billions of queries</li>
+<li><strong>Campus:</strong> IIT Bombay 2024 (L4)</li>
+<li><strong>Components:</strong><ul>
+<li>Trie data structure for prefix search</li>
+<li>Query frequency tracking</li>
+<li>Personalization</li>
+<li>Caching strategy (CDN, browser)</li>
+<li>Real-time updates</li>
+</ul>
+</li>
+</ul>
+<h4>2. Design YouTube</h4>
+<ul>
+<li><strong>Complexity:</strong> Very High</li>
+<li><strong>Focus:</strong> Video upload, processing, streaming, CDN</li>
+<li><strong>Campus:</strong> Off-campus L4 interview</li>
+<li><strong>Key Topics:</strong><ul>
+<li>Video encoding pipeline</li>
+<li>CDN for global distribution</li>
+<li>Recommendation system</li>
+<li>Comments system (eventual consistency)</li>
+<li>View counter (approximate counting)</li>
+</ul>
+</li>
+</ul>
+<h4>3. Design Google Drive</h4>
+<ul>
+<li><strong>Complexity:</strong> High</li>
+<li><strong>Focus:</strong> File storage, sync, sharing, versioning</li>
+<li><strong>Components:</strong><ul>
+<li>Chunking algorithm</li>
+<li>Delta sync</li>
+<li>Conflict resolution</li>
+<li>Metadata database</li>
+<li>Notification system</li>
+</ul>
+</li>
+</ul>
+<h4>4. Design Google Maps</h4>
+<ul>
+<li><strong>Complexity:</strong> Very High</li>
+<li><strong>Focus:</strong> Geospatial indexing, routing, real-time traffic</li>
+<li><strong>Campus Experience:</strong> &quot;Asked to focus on routing algorithm - Dijkstra&#39;s variants&quot;</li>
+<li><strong>Key Topics:</strong><ul>
+<li>QuadTree / S2 geometry</li>
+<li>A* algorithm for routing</li>
+<li>Traffic data aggregation</li>
+<li>ETA calculation</li>
+</ul>
+</li>
+</ul>
+<h4>5. Design Distributed Web Crawler</h4>
+<ul>
+<li><strong>Complexity:</strong> High</li>
+<li><strong>Focus:</strong> Scalability, politeness, deduplication</li>
+<li><strong>Campus:</strong> IIT Madras 2025 (L4)</li>
+<li><strong>Components:</strong><ul>
+<li>URL frontier (priority queue)</li>
+<li>DNS resolver</li>
+<li>Robots.txt handler</li>
+<li>BloomFilter for deduplication</li>
+<li>Distributed architecture</li>
+</ul>
+</li>
+</ul>
+<h4>6. Design Rate Limiter</h4>
+<ul>
+<li><strong>Frequency:</strong> Medium</li>
+<li><strong>Focus:</strong> Token bucket, sliding window</li>
+<li><strong>Use Case:</strong> API rate limiting for Google Cloud</li>
+</ul>
+<h4>7. Design News Feed (like Google Discover)</h4>
+<ul>
+<li><strong>Complexity:</strong> High</li>
+<li><strong>Focus:</strong> Ranking, personalization, real-time updates</li>
+<li><strong>Components:</strong><ul>
+<li>Content ingestion pipeline</li>
+<li>ML-based ranking</li>
+<li>Push vs Pull models</li>
+<li>Read-heavy optimization</li>
+</ul>
+</li>
+</ul>
+<h4>8. Design Distributed Cache</h4>
+<ul>
+<li><strong>Frequency:</strong> Medium</li>
+<li><strong>Focus:</strong> Consistent hashing, eviction policies</li>
+<li><strong>Use Case:</strong> Google&#39;s Memcached equivalent</li>
+</ul>
+<hr>
+<h2>💾 OS &amp; DBMS Concepts</h2>
+<h3>Operating Systems</h3>
+<h4>Memory Management</h4>
+<p><strong>Question:</strong> &quot;Explain virtual memory, paging, and TLB&quot;</p>
+<ul>
+<li><strong>Campus:</strong> Asked in 50% of interviews</li>
+<li><strong>Deep Dive:</strong> Page replacement algorithms, working set model</li>
+<li><strong>Follow-up:</strong> &quot;How does Linux manage memory?&quot;</li>
+</ul>
+<h4>Concurrency</h4>
+<p><strong>Question:</strong> &quot;Explain race condition with real example&quot;</p>
+<ul>
+<li><strong>Follow-up:</strong> &quot;Implement thread-safe singleton&quot;</li>
+<li><strong>Campus:</strong> NIT Trichy 2024</li>
+</ul>
+<pre><code class="language-cpp">// Asked to identify race condition
+int counter = 0;
+void increment() {
+    counter++;  // Not atomic!
+}
+</code></pre>
+<h4>Deadlock</h4>
+<p><strong>Question:</strong> &quot;Four conditions and prevention strategies&quot;</p>
+<ul>
+<li><strong>Real Scenario:</strong> &quot;Design a system to prevent deadlock in database transactions&quot;</li>
+</ul>
+<h4>Scheduling</h4>
+<p><strong>Question:</strong> &quot;Compare scheduling algorithms - FCFS, SJF, Round Robin&quot;</p>
+<ul>
+<li><strong>Follow-up:</strong> &quot;Which does Linux use? Why CFS?&quot;</li>
+</ul>
+<h3>Database Management Systems</h3>
+<h4>Conceptual Deep Dives</h4>
+<ol>
+<li><p><strong>Indexing Internals</strong></p>
+<ul>
+<li><strong>Question:</strong> &quot;Explain B+ tree structure and why used in databases&quot;</li>
+<li><strong>Follow-up:</strong> &quot;B+ tree vs LSM tree (used in LevelDB/BigTable)&quot;</li>
+<li><strong>Campus:</strong> IIT Delhi 2024</li>
+</ul>
+</li>
+<li><p><strong>ACID vs BASE</strong></p>
+<ul>
+<li><strong>Question:</strong> &quot;When to choose consistency over availability?&quot;</li>
+<li><strong>Google Context:</strong> BigTable, Spanner consistency models</li>
+</ul>
+</li>
+<li><p><strong>Transactions</strong></p>
+<ul>
+<li><strong>Question:</strong> &quot;Explain two-phase locking and MVCC&quot;</li>
+<li><strong>Follow-up:</strong> &quot;How does Spanner handle distributed transactions?&quot;</li>
+</ul>
+</li>
+<li><p><strong>Replication</strong></p>
+<ul>
+<li><strong>Question:</strong> &quot;Master-slave vs master-master replication&quot;</li>
+<li><strong>Trade-offs:</strong> Consistency vs latency</li>
+</ul>
+</li>
+</ol>
+<h4>SQL Questions (Less Common)</h4>
+<p>Google focuses more on concepts than SQL syntax, but basic queries may be asked.</p>
+<pre><code class="language-sql">-- Question: Find employees earning more than their managers
+-- Campus: IIIT Bangalore 2024
+
+SELECT e1.name AS Employee
+FROM Employee e1
+JOIN Employee e2 ON e1.manager_id = e2.id
+WHERE e1.salary &gt; e2.salary;
+</code></pre>
+<hr>
+<h2>🌐 Frontend &amp; Web Concepts</h2>
+<h3>JavaScript Deep Dive</h3>
+<h4>1. Event Loop</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Explain JavaScript event loop with microtasks and macrotasks&quot;</li>
+<li><strong>Code Question:</strong></li>
+</ul>
+<pre><code class="language-javascript">console.log(&#39;1&#39;);
+setTimeout(() =&gt; console.log(&#39;2&#39;), 0);
+Promise.resolve().then(() =&gt; console.log(&#39;3&#39;));
+console.log(&#39;4&#39;);
+// Output: 1, 4, 3, 2 - Explain why
+</code></pre>
+<h4>2. Closures &amp; Scope</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Implement function memoization using closures&quot;</li>
+<li><strong>Campus:</strong> VIT 2025</li>
+</ul>
+<h4>3. Prototypes</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Explain prototype chain and inheritance&quot;</li>
+</ul>
+<h3>Web Performance</h3>
+<h4>1. Critical Rendering Path</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Explain how browser renders a page&quot;</li>
+<li><strong>Topics:</strong> DOM, CSSOM, render tree, layout, paint</li>
+</ul>
+<h4>2. Performance Optimization</h4>
+<ul>
+<li><strong>Questions:</strong><ul>
+<li>&quot;How to optimize page load time?&quot;</li>
+<li>&quot;Explain lazy loading, code splitting&quot;</li>
+<li>&quot;What is tree shaking?&quot;</li>
+</ul>
+</li>
+</ul>
+<h3>React (for Frontend Roles)</h3>
+<h4>1. Reconciliation</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Explain React Fiber architecture&quot;</li>
+<li><strong>Deep:</strong> How React decides what to update</li>
+</ul>
+<h4>2. State Management at Scale</h4>
+<ul>
+<li><strong>Question:</strong> &quot;Design state management for large application&quot;</li>
+<li><strong>Options:</strong> Redux, Context, Recoil, Zustand</li>
+</ul>
+<hr>
+<h2>🤝 HR &amp; Behavioral Questions</h2>
+<h3>&quot;Googleyness&quot; Round</h3>
+<p>This unique round assesses cultural fit and general cognitive ability.</p>
+<h4>1. &quot;Teach me something you&#39;re passionate about&quot;</h4>
+<ul>
+<li><strong>Duration:</strong> 10-15 minutes</li>
+<li><strong>Tips:</strong> Choose something you genuinely love, explain clearly</li>
+<li><strong>Campus Experience:</strong> &quot;I explained competitive programming strategies&quot;</li>
+</ul>
+<h4>2. &quot;How do you handle ambiguity?&quot;</h4>
+<ul>
+<li><strong>STAR Example:</strong> Project with unclear requirements</li>
+<li><strong>Key:</strong> Show comfort with uncertainty</li>
+</ul>
+<h4>3. &quot;Tell me about a time you influenced without authority&quot;</h4>
+<ul>
+<li><strong>Context:</strong> Cross-team collaboration</li>
+<li><strong>Campus:</strong> College club/fest examples work well</li>
+</ul>
+<h4>4. &quot;Describe a technical decision you made that was controversial&quot;</h4>
+<ul>
+<li><strong>Show:</strong> Analytical thinking, respectful communication</li>
+<li><strong>Campus:</strong> Project technology choice examples</li>
+</ul>
+<h3>General Behavioral</h3>
+<h4>1. &quot;Why Google?&quot;</h4>
+<p><strong>Good Answers:</strong></p>
+<ul>
+<li>Innovation at scale</li>
+<li>Impact on billions of users</li>
+<li>Learning from brilliant engineers</li>
+<li>Cutting-edge technology (ML, distributed systems)</li>
+<li><strong>Avoid:</strong> &quot;For the free food&quot; 😄</li>
+</ul>
+<h4>2. &quot;Describe your most challenging bug&quot;</h4>
+<ul>
+<li><strong>Structure:</strong> Problem → Investigation → Solution → Learning</li>
+<li><strong>Campus Tip:</strong> Use internship or project examples</li>
+</ul>
+<h4>3. &quot;Tell me about a failed project&quot;</h4>
+<ul>
+<li><strong>Key:</strong> Focus on learnings, not excuses</li>
+<li><strong>Show:</strong> Resilience, growth mindset</li>
+</ul>
+<h4>4. &quot;How do you prioritize tasks?&quot;</h4>
+<ul>
+<li><strong>Frameworks:</strong> Eisenhower matrix, impact vs effort</li>
+<li><strong>Example:</strong> Multiple deadlines during exams</li>
+</ul>
+<h3>Questions to Ask Interviewer</h3>
+<ol>
+<li>&quot;What&#39;s the biggest technical challenge your team faces?&quot;</li>
+<li>&quot;How does your team contribute to Google&#39;s mission?&quot;</li>
+<li>&quot;What&#39;s the team&#39;s engineering culture like?&quot;</li>
+<li>&quot;What&#39;s a typical project lifecycle?&quot;</li>
+<li>&quot;How do you measure impact?&quot;</li>
+</ol>
+<hr>
+<h2>🧩 Aptitude &amp; Logic Puzzles</h2>
+<h3>Classic Google Puzzles</h3>
+<h4>1. Manhole Cover Puzzle</h4>
+<p><strong>Question:</strong> &quot;Why are manhole covers round?&quot;
+<strong>Answers:</strong></p>
+<ul>
+<li>Can&#39;t fall through the hole (any orientation)</li>
+<li>Easy to roll</li>
+<li>No alignment needed
+<strong>Campus:</strong> Asked to test practical reasoning</li>
+</ul>
+<h4>2. Clock Angle Problem</h4>
+<p><strong>Question:</strong> &quot;Angle between hour and minute hands at 3:15?&quot;
+<strong>Answer:</strong> 7.5 degrees
+<strong>Formula:</strong> |30H - 6M| or |30H - 6M - 360|
+<strong>Campus:</strong> BITS Pilani 2024</p>
+<h4>3. Pirates and Gold Coins</h4>
+<p><strong>Question:</strong> &quot;5 pirates, 100 gold coins. Most senior proposes distribution. &gt;50% vote needed or he dies. Strategy?&quot;
+<strong>Answer:</strong> Game theory problem, backward induction
+<strong>Campus:</strong> IIT Bombay 2024 - &quot;Tested logical reasoning&quot;</p>
+<h4>4. Eight Balls Problem</h4>
+<p><strong>Question:</strong> &quot;8 balls, 1 heavier. 2 weighings to find it?&quot;
+<strong>Answer:</strong> Divide into 3 groups (3, 3, 2)
+<strong>Campus:</strong> Common warmup puzzle</p>
+<h4>5. Horse Race Problem</h4>
+<p><strong>Question:</strong> &quot;25 horses, 5 tracks, find top 3 fastest in minimum races&quot;
+<strong>Answer:</strong> 7 races
+<strong>Method:</strong> 5 races → race winners → race top potentials
+<strong>Campus:</strong> IIT Kharagpur 2025</p>
+<h3>Probability Puzzles</h3>
+<h4>1. Two Egg Problem</h4>
+<p><strong>Question:</strong> &quot;100-floor building, 2 eggs. Find highest safe floor with minimum drops in worst case&quot;
+<strong>Answer:</strong> 14 drops
+<strong>Method:</strong> Drop from floors 14, 27, 39, 50, 60, 69, 77, 84, 90, 95, 99...
+<strong>Campus:</strong> &quot;One of the hardest puzzles I got&quot;</p>
+<h4>2. Birthday Paradox Variation</h4>
+<p><strong>Question:</strong> &quot;Probability of 3 people sharing birthday in a group of N&quot;
+<strong>Campus:</strong> Testing probability understanding</p>
+<h4>3. Card Game Probability</h4>
+<p><strong>Question:</strong> &quot;Draw cards until you get Ace. Expected number of draws?&quot;
+<strong>Answer:</strong> 27 (depends on rules)
+<strong>Campus:</strong> IIT Delhi 2024</p>
+<h3>Coding Puzzles</h3>
+<h4>1. Reservoir Sampling</h4>
+<p><strong>Question:</strong> &quot;Sample K items from stream of unknown size with equal probability&quot;
+<strong>Application:</strong> Google search sampling
+<strong>Campus:</strong> L4 interview</p>
+<h4>2. Generate Random7() using Random5()</h4>
+<p><strong>Question:</strong> Implement random7() using only random5()
+<strong>Key:</strong> Rejection sampling
+<strong>Campus:</strong> Common interview question</p>
+<hr>
+<h2>📱 Real Campus Interview Experiences</h2>
+<h3>IIT Bombay - L3 SWE (2025)</h3>
+<p><strong>Phone Screen 1:</strong></p>
+<ul>
+<li>Duration: 45 minutes</li>
+<li>Question 1: Group Anagrams (Medium)</li>
+<li>Question 2: Validate BST (Medium)</li>
+<li>Behavioral: Why Google?</li>
+<li>Result: Passed</li>
+</ul>
+<p><strong>Phone Screen 2:</strong></p>
+<ul>
+<li>Duration: 45 minutes</li>
+<li>Question: Word Search (Medium) + follow-ups</li>
+<li>Behavioral: Tell about a challenging project</li>
+<li>Result: Selected for on-site</li>
+</ul>
+<p><strong>On-site (Virtual):</strong></p>
+<p><strong>Round 1 - DSA:</strong></p>
+<ul>
+<li>Duration: 45 minutes</li>
+<li>Question: Median of Two Sorted Arrays (Hard)</li>
+<li>Interviewer was from Google Bangalore</li>
+<li>Started with brute force, guided to binary search</li>
+<li>Got optimal solution in 35 minutes</li>
+</ul>
+<p><strong>Round 2 - DSA:</strong></p>
+<ul>
+<li>Duration: 45 minutes</li>
+<li>Question: Decode Ways (Medium)</li>
+<li>Follow-up: With wildcard characters (Hard)</li>
+<li>Completed both</li>
+</ul>
+<p><strong>Round 3 - System Design:</strong></p>
+<ul>
+<li>Duration: 45 minutes</li>
+<li>Design Autocomplete System</li>
+<li>Discussed Trie, caching, ranking</li>
+<li>Focus on scalability</li>
+</ul>
+<p><strong>Round 4 - Googleyness:</strong></p>
+<ul>
+<li>Duration: 30 minutes</li>
+<li>&quot;Teach me about competitive programming&quot;</li>
+<li>Behavioral questions</li>
+<li>Very conversational, low pressure</li>
+</ul>
+<p><strong>Round 5 - DSA:</strong></p>
+<ul>
+<li>Duration: 45 minutes</li>
+<li>Question: Serialize/Deserialize Binary Tree</li>
+<li>Multiple approaches discussed</li>
+</ul>
+<p><strong>Result:</strong> Offer! L3, 55 LPA CTC
+<strong>Joining:</strong> Google Hyderabad</p>
+<p><strong>Feedback:</strong>
+&quot;The interview process was long but fair. Interviewers were friendly and collaborative. They care more about thought process than perfect solution. Communication is key - talk through your approach. Don&#39;t give up on hard problems, they want to see how you think under pressure.&quot;</p>
+<h3>IIT Delhi - L3 SWE (2024)</h3>
+<p><strong>Application:</strong> Through university portal
+<strong>Timeline:</strong> 3 months from application to offer</p>
+<p><strong>Phone Screens:</strong></p>
+<ul>
+<li>Both focused on DSA</li>
+<li>Questions: Container With Most Water, Burst Balloons</li>
+<li>1-week gap between screens</li>
+</ul>
+<p><strong>On-site:</strong></p>
+<ul>
+<li>5 rounds in one day</li>
+<li>Mixed difficulty - 2 medium, 2 hard, 1 design</li>
+<li>Lunch with team (not evaluated)</li>
+</ul>
+<p><strong>Offer:</strong> L3, 52 LPA CTC, Bangalore</p>
+<p><strong>Experience:</strong>
+&quot;Very organized process. Recruiter was communicative. Interviews were challenging but fair. Googleyness round was unique - they genuinely wanted to know me as a person. Advice: Practice mock interviews, Google interviews are marathons.&quot;</p>
+<h3>BITS Pilani - L4 SWE (2024, Off-Campus)</h3>
+<p><strong>Background:</strong> 2 years experience at startup</p>
+<p><strong>Process:</strong></p>
+<ul>
+<li>Applied through referral</li>
+<li>2 phone screens (both DSA heavy)</li>
+<li>6 on-site rounds including system design</li>
+</ul>
+<p><strong>System Design Question:</strong></p>
+<ul>
+<li>Design Distributed Web Crawler</li>
+<li>45 minutes, whiteboard session</li>
+<li>Deep dive into architecture, scalability</li>
+</ul>
+<p><strong>Coding Questions:</strong></p>
+<ul>
+<li>Sudoku Solver (Hard)</li>
+<li>Minimum Window Substring (Hard)</li>
+<li>Design Trie (Medium)</li>
+</ul>
+<p><strong>Offer:</strong> L4, 85 LPA CTC, Google Bangalore</p>
+<p><strong>Key Insight:</strong>
+&quot;For experienced hire, bar is higher. System design is crucial. They expect production-level thinking. Also, LeetCode Hard is standard for L4+. Don&#39;t shy away from hard problems.&quot;</p>
+<hr>
+<h2>📊 Google India Salary Ranges (2024-2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Role</th>
+<th>Experience</th>
+<th>CTC Range (LPA)</th>
+<th>Equity (4yr)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>L3</td>
+<td>SWE</td>
+<td>0-2 years</td>
+<td>45-60</td>
+<td>15-25 lakhs</td>
+</tr>
+<tr>
+<td>L4</td>
+<td>SWE-II</td>
+<td>2-5 years</td>
+<td>70-110</td>
+<td>40-70 lakhs</td>
+</tr>
+<tr>
+<td>L5</td>
+<td>Senior SWE</td>
+<td>5-8 years</td>
+<td>130-180</td>
+<td>80-150 lakhs</td>
+</tr>
+<tr>
+<td>L6</td>
+<td>Staff SWE</td>
+<td>8+ years</td>
+<td>200-300+</td>
+<td>150-300+ lakhs</td>
+</tr>
+</tbody></table>
+<p><strong>Components:</strong> Base + Bonus (15%) + GSU (Google Stock Units) + Benefits</p>
+<p><strong>Locations:</strong> Bangalore, Hyderabad, Gurgaon (NCR)</p>
+<hr>
+<h2>🎯 Preparation Strategy for Google</h2>
+<h3>For L3 (New Grad / 0-2 years)</h3>
+<p><strong>Timeline: 6 months</strong></p>
+<p><strong>Month 1-2: Foundation</strong></p>
+<ul>
+<li>Master easy and medium problems</li>
+<li>Focus on fundamental data structures</li>
+<li>Target: 150 easy + 100 medium</li>
+</ul>
+<p><strong>Month 3-4: Advanced DSA</strong></p>
+<ul>
+<li>Hard problems (aim for 50+)</li>
+<li>Google tagged questions on LeetCode (600+)</li>
+<li>Mock interviews on Pramp/Interviewing.io</li>
+</ul>
+<p><strong>Month 5: Depth</strong></p>
+<ul>
+<li>Revisit all patterns</li>
+<li>Time-bound practice (45 min per problem)</li>
+<li>System design basics (for L4)</li>
+</ul>
+<p><strong>Month 6: Polish</strong></p>
+<ul>
+<li>Daily practice (2 problems)</li>
+<li>Mock interviews (2 per week)</li>
+<li>Behavioral preparation (STAR format)</li>
+</ul>
+<h3>Key Resources</h3>
+<ol>
+<li><strong>LeetCode:</strong> Google company tag (650+ questions)</li>
+<li><strong>Books:</strong><ul>
+<li>&quot;Elements of Programming Interviews&quot; (EPI)</li>
+<li>&quot;Cracking the Coding Interview&quot;</li>
+</ul>
+</li>
+<li><strong>Courses:</strong><ul>
+<li>Grokking the Coding Interview</li>
+<li>System Design Primer (GitHub)</li>
+</ul>
+</li>
+<li><strong>Practice:</strong><ul>
+<li>Codeforces for problem-solving speed</li>
+<li>Mock interviews with peers</li>
+</ul>
+</li>
+</ol>
+<h3>Success Metrics</h3>
+<ul>
+<li><strong>Acceptance Rate:</strong> ~3-5% overall</li>
+<li><strong>Campus:</strong> Slightly higher (~8-10% from top IITs)</li>
+<li><strong>Conversion:</strong> Phone screen → On-site: ~30%</li>
+<li><strong>Conversion:</strong> On-site → Offer: ~20-25%</li>
+</ul>
+<p><strong>Bottom Line:</strong> Google interviews are among the hardest. Start early, practice consistently, and don&#39;t get discouraged by rejections. Many successful Googlers took 2-3 attempts.</p>
+<hr>
+<h1>Microsoft</h1>
+<h2>Interview Process Overview</h2>
+<ul>
+<li><strong>Rounds:</strong> 4-5 rounds</li>
+<li><strong>Duration:</strong> 3-4 weeks</li>
+<li><strong>Focus:</strong> DSA (Moderate-High), System Design, Behavioral, Cultural fit</li>
+<li><strong>Coding Platform:</strong> MS Teams, Codepair, or whiteboard</li>
+<li><strong>Unique:</strong> &quot;As Appropriate&quot; (AA) round for borderline candidates</li>
+<li><strong>Roles:</strong> SDE, SDET, PM-T (Program Manager - Technical)</li>
+</ul>
+<h2>🎯 Common DSA Patterns Asked</h2>
+<h3>Pattern Frequency</h3>
+<ol>
+<li><strong>Arrays &amp; Strings</strong> (35%)</li>
+<li><strong>Linked Lists</strong> (15%)</li>
+<li><strong>Trees</strong> (20%)</li>
+<li><strong>Dynamic Programming</strong> (12%)</li>
+<li><strong>Graphs</strong> (10%)</li>
+<li><strong>Design Problems</strong> (8%)</li>
+</ol>
+<p><strong>Note:</strong> Microsoft asks more practical, scenario-based questions compared to Google&#39;s pure algorithmic focus.</p>
+<hr>
+<h2>💻 DSA Questions by Difficulty</h2>
+<h3>Easy Questions</h3>
+<h4>1. Reverse String</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> String, Two Pointers</li>
+<li><strong>Asked in:</strong> Warmup question</li>
+<li><strong>Campus:</strong> Common across all interviews</li>
+</ul>
+<h4>2. Implement strStr()</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> String, KMP (optimal)</li>
+<li><strong>Asked in:</strong> SDE-1 Round 1</li>
+<li><strong>Campus:</strong> VIT 2024</li>
+</ul>
+<h4>3. Remove Duplicates from Sorted Array</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> Arrays, Two Pointers</li>
+<li><strong>Asked in:</strong> Online Assessment</li>
+</ul>
+<h4>4. Excel Sheet Column Number</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> Math, String</li>
+<li><strong>Asked in:</strong> Phone Screen</li>
+<li><strong>Microsoft Context:</strong> Excel team favorite question</li>
+<li><strong>Campus:</strong> IIT Roorkee 2025</li>
+</ul>
+<h4>5. Symmetric Tree</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> Tree, Recursion</li>
+<li><strong>Asked in:</strong> SDE-1 Interview</li>
+</ul>
+<hr>
+<h3>Medium Questions</h3>
+<h4>1. LRU Cache</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Hash Map + Doubly Linked List</li>
+<li><strong>Asked in:</strong> Very Common (SDE-1, SDE-2)</li>
+<li><strong>Campus:</strong> IIT Delhi 2024</li>
+<li><strong>Microsoft Context:</strong> Asked in ~40% of interviews</li>
+<li><strong>Implementation:</strong> Must work in O(1) for get and put</li>
+</ul>
+<h4>2. Add Two Numbers (Linked List)</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Linked List, Math</li>
+<li><strong>Asked in:</strong> SDE-1 Round 1</li>
+<li><strong>Campus:</strong> BITS Pilani 2025</li>
+<li><strong>Follow-up:</strong> What if numbers are stored in normal order?</li>
+</ul>
+<h4>3. Kth Largest Element in Array</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Heap, Quickselect</li>
+<li><strong>Asked in:</strong> Common across levels</li>
+<li><strong>Multiple Solutions:</strong> Heap O(n log k), Quickselect O(n) average</li>
+</ul>
+<h4>4. Course Schedule</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Graph, Topological Sort, Cycle Detection</li>
+<li><strong>Asked in:</strong> SDE-2 Interview</li>
+<li><strong>Campus:</strong> IIT Bombay 2024</li>
+</ul>
+<h4>5. String to Integer (atoi)</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> String, Edge Cases</li>
+<li><strong>Asked in:</strong> SDE-1 Interview</li>
+<li><strong>Campus Experience:</strong> &quot;Tricky edge cases - whitespace, overflow, invalid input&quot;</li>
+</ul>
+<h4>6. Implement Trie</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Trie, Design</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2</li>
+<li><strong>Microsoft Context:</strong> Autocomplete in Office products</li>
+</ul>
+<h4>7. Reverse Linked List II</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Linked List</li>
+<li><strong>Asked in:</strong> SDE-1 Round 2</li>
+<li><strong>Campus:</strong> NIT Surathkal 2024</li>
+</ul>
+<h4>8. Binary Tree Right Side View</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Tree, BFS/DFS</li>
+<li><strong>Asked in:</strong> SDE-1 Interview</li>
+</ul>
+<h4>9. Find All Anagrams in String</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Sliding Window, Hash Map</li>
+<li><strong>Asked in:</strong> Phone Screen</li>
+<li><strong>Campus:</strong> IIIT Hyderabad 2025</li>
+</ul>
+<h4>10. Design Browser History</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Design, Doubly Linked List / Stack</li>
+<li><strong>Asked in:</strong> SDE-1 Interview</li>
+<li><strong>Microsoft Context:</strong> Edge browser team</li>
+</ul>
+<h4>11. Excel Sheet Column Title</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Math, String</li>
+<li><strong>Asked in:</strong> Excel team interviews</li>
+<li><strong>Campus:</strong> IIT Kanpur 2024</li>
+</ul>
+<h4>12. Lowest Common Ancestor of Binary Tree</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Tree, DFS</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2</li>
+<li><strong>Variations:</strong> BST version (easier)</li>
+</ul>
+<h4>13. Pow(x, n)</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Math, Binary Exponentiation</li>
+<li><strong>Asked in:</strong> Phone Screen</li>
+<li><strong>Key:</strong> Handle negative exponent, overflow</li>
+</ul>
+<h4>14. Spiral Matrix</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Matrix, Simulation</li>
+<li><strong>Asked in:</strong> SDE-1 Interview</li>
+<li><strong>Campus:</strong> VIT 2025</li>
+</ul>
+<h4>15. Decode String</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Stack, Recursion</li>
+<li><strong>Asked in:</strong> SDE-1 Round 2</li>
+<li><strong>Example:</strong> &quot;3[a2[c]]&quot; → &quot;accaccacc&quot;</li>
+</ul>
+<hr>
+<h3>Hard Questions</h3>
+<h4>1. Merge K Sorted Lists</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Heap, Divide &amp; Conquer</li>
+<li><strong>Asked in:</strong> SDE-2, SDE-3</li>
+<li><strong>Campus:</strong> IIT Madras 2024</li>
+<li><strong>Optimal:</strong> Min-heap approach O(N log k)</li>
+</ul>
+<h4>2. Regular Expression Matching</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Dynamic Programming, Recursion</li>
+<li><strong>Asked in:</strong> SDE-2 Interview</li>
+<li><strong>Campus:</strong> IIT Bombay 2025</li>
+</ul>
+<h4>3. Word Ladder II</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> BFS, Backtracking</li>
+<li><strong>Asked in:</strong> SDE-2 Interview</li>
+<li><strong>Microsoft Context:</strong> Related to spell-check systems</li>
+</ul>
+<h4>4. Minimum Window Substring</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Sliding Window, Two Pointers</li>
+<li><strong>Asked in:</strong> SDE-2 Round 1</li>
+<li><strong>Campus:</strong> BITS Pilani 2024</li>
+<li><strong>Key:</strong> Optimized two-pointer approach</li>
+</ul>
+<h4>5. Largest Rectangle in Histogram</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Stack, Arrays</li>
+<li><strong>Asked in:</strong> SDE-2 Interview</li>
+<li><strong>Follow-up:</strong> Maximal Rectangle in Matrix</li>
+</ul>
+<h4>6. Serialize and Deserialize Binary Tree</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Tree, BFS/DFS, Design</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2</li>
+<li><strong>Campus:</strong> IIT Delhi 2024</li>
+</ul>
+<h4>7. Concatenated Words</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Trie, DP, DFS</li>
+<li><strong>Asked in:</strong> SDE-2 Interview</li>
+<li><strong>Microsoft Context:</strong> Word suggestions in Office</li>
+</ul>
+<hr>
+<h2>🏗️ System Design Questions</h2>
+<h3>Asked for SDE-2 and Above</h3>
+<h4>1. Design Microsoft Teams Chat</h4>
+<ul>
+<li><strong>Frequency:</strong> High</li>
+<li><strong>Focus:</strong> Real-time messaging, presence, scalability</li>
+<li><strong>Campus:</strong> IIT Bombay 2024 (SDE-2)</li>
+<li><strong>Components:</strong><ul>
+<li>WebSocket connections</li>
+<li>Message queue (Azure Service Bus)</li>
+<li>Presence service</li>
+<li>Message storage (Azure Cosmos DB)</li>
+<li>CDN for media files</li>
+</ul>
+</li>
+</ul>
+<h4>2. Design OneDrive</h4>
+<ul>
+<li><strong>Complexity:</strong> High</li>
+<li><strong>Focus:</strong> File sync, versioning, conflict resolution</li>
+<li><strong>Key Topics:</strong><ul>
+<li>Chunking algorithm (variable-size chunks)</li>
+<li>Delta sync</li>
+<li>Metadata vs data storage</li>
+<li>Notification service for multi-device sync</li>
+<li>Conflict resolution strategies</li>
+</ul>
+</li>
+</ul>
+<h4>3. Design Excel Online (Collaborative Editing)</h4>
+<ul>
+<li><strong>Complexity:</strong> Very High</li>
+<li><strong>Focus:</strong> Operational transformation, conflict resolution</li>
+<li><strong>Campus:</strong> IIT Delhi 2024 (SDE-2)</li>
+<li><strong>Components:</strong><ul>
+<li>OT (Operational Transformation) / CRDT</li>
+<li>WebSocket for real-time updates</li>
+<li>Calculation engine</li>
+<li>Cell locking mechanism</li>
+</ul>
+</li>
+</ul>
+<h4>4. Design URL Shortener</h4>
+<ul>
+<li><strong>Frequency:</strong> High</li>
+<li><strong>Focus:</strong> Basic system design question</li>
+<li><strong>Asked for:</strong> SDE-1 (brief), SDE-2 (detailed)</li>
+<li><strong>Campus:</strong> NIT Trichy 2025</li>
+</ul>
+<h4>5. Design Outlook Email System</h4>
+<ul>
+<li><strong>Complexity:</strong> High</li>
+<li><strong>Focus:</strong> Email storage, search, spam filtering</li>
+<li><strong>Components:</strong><ul>
+<li>SMTP/IMAP protocols</li>
+<li>Email storage (blob + metadata)</li>
+<li>Search indexing (Azure Cognitive Search)</li>
+<li>Spam filtering (ML models)</li>
+</ul>
+</li>
+</ul>
+<h4>6. Design Notification System</h4>
+<ul>
+<li><strong>Frequency:</strong> Medium</li>
+<li><strong>Focus:</strong> Push, email, SMS notifications</li>
+<li><strong>Use Case:</strong> Microsoft 365 notifications</li>
+</ul>
+<h4>7. Design LinkedIn News Feed</h4>
+<ul>
+<li><strong>Complexity:</strong> High</li>
+<li><strong>Focus:</strong> Ranking, scalability, real-time updates</li>
+<li><strong>Campus:</strong> IIT Kanpur 2024 (SDE-2)</li>
+<li><strong>Note:</strong> Microsoft owns LinkedIn</li>
+</ul>
+<h4>8. Design Rate Limiter</h4>
+<ul>
+<li><strong>Frequency:</strong> Medium</li>
+<li><strong>Focus:</strong> API throttling</li>
+<li><strong>Use Case:</strong> Azure API Management</li>
+</ul>
+<hr>
+<h2>💾 OS &amp; DBMS Concepts</h2>
+<h3>Operating Systems</h3>
+<h4>Process &amp; Memory Management</h4>
+<p><strong>Question:</strong> &quot;Explain process vs thread with real Microsoft product example&quot;</p>
+<ul>
+<li><strong>Answer:</strong> &quot;Microsoft Word - each document can be a thread within Word process&quot;</li>
+<li><strong>Campus:</strong> Asked in 60% of interviews</li>
+</ul>
+<p><strong>Question:</strong> &quot;What is virtual memory and paging?&quot;</p>
+<ul>
+<li><strong>Follow-up:</strong> &quot;How does Windows handle page faults?&quot;</li>
+<li><strong>Campus:</strong> IIT Delhi 2024</li>
+</ul>
+<p><strong>Question:</strong> &quot;Explain deadlock with example from a database system&quot;</p>
+<ul>
+<li><strong>Real Scenario:</strong> Two transactions waiting for locks</li>
+<li><strong>Prevention:</strong> Timeout, lock ordering</li>
+</ul>
+<h4>Synchronization</h4>
+<p><strong>Question:</strong> &quot;Implement a thread-safe queue&quot;</p>
+<ul>
+<li><strong>Asked in:</strong> SDE-2 Interview</li>
+<li><strong>Key:</strong> Mutex/lock, condition variables</li>
+</ul>
+<pre><code class="language-cpp">// Question: What&#39;s wrong with this code?
+class Counter {
+    int count = 0;
+public:
+    void increment() { count++; }
+    int get() { return count; }
+};
+// Answer: Not thread-safe, race condition
+</code></pre>
+<p><strong>Question:</strong> &quot;Semaphore vs Mutex - when to use which?&quot;</p>
+<ul>
+<li><strong>Campus:</strong> BITS Pilani 2024</li>
+</ul>
+<h4>Windows-Specific (Sometimes Asked)</h4>
+<p><strong>Question:</strong> &quot;What is a Windows Handle?&quot;</p>
+<ul>
+<li><strong>Context:</strong> Relevant for Windows development roles</li>
+</ul>
+<p><strong>Question:</strong> &quot;Explain Windows DLL (Dynamic Link Library)&quot;</p>
+<ul>
+<li><strong>Follow-up:</strong> &quot;DLL Hell problem and how .NET solves it&quot;</li>
+</ul>
+<h3>Database Management Systems</h3>
+<h4>SQL Questions</h4>
+<p>Microsoft emphasizes SQL more than Google does.</p>
+<h5>1. Employee Salary Problems</h5>
+<pre><code class="language-sql">-- Question: Find department with highest average salary
+-- Campus: NIT Surathkal 2024
+
+SELECT department_id, AVG(salary) as avg_salary
+FROM Employee
+GROUP BY department_id
+ORDER BY avg_salary DESC
+LIMIT 1;
+</code></pre>
+<h5>2. Consecutive Numbers</h5>
+<pre><code class="language-sql">-- Question: Find numbers that appear at least 3 times consecutively
+-- Campus: IIT Roorkee 2025
+
+SELECT DISTINCT l1.num
+FROM Logs l1, Logs l2, Logs l3
+WHERE l1.id = l2.id - 1
+  AND l2.id = l3.id - 1
+  AND l1.num = l2.num
+  AND l2.num = l3.num;
+</code></pre>
+<h5>3. Rank Scores</h5>
+<pre><code class="language-sql">-- Question: Rank scores in descending order
+-- Campus: VIT 2024
+
+SELECT score,
+       DENSE_RANK() OVER (ORDER BY score DESC) as rank
+FROM Scores;
+</code></pre>
+<h4>Conceptual Questions</h4>
+<p><strong>Question:</strong> &quot;Explain database indexing - when it helps, when it hurts&quot;</p>
+<ul>
+<li><strong>Follow-up:</strong> &quot;What is a covering index?&quot;</li>
+<li><strong>Campus:</strong> IIT Bombay 2024</li>
+</ul>
+<p><strong>Question:</strong> &quot;ACID properties with examples&quot;</p>
+<ul>
+<li><strong>Microsoft Context:</strong> SQL Server transaction guarantees</li>
+</ul>
+<p><strong>Question:</strong> &quot;What is normalization? When would you denormalize?&quot;</p>
+<ul>
+<li><strong>Real Scenario:</strong> Reporting vs transactional databases</li>
+</ul>
+<p><strong>Question:</strong> &quot;Explain different isolation levels&quot;</p>
+<ul>
+<li><strong>Focus:</strong> READ COMMITTED, REPEATABLE READ, SERIALIZABLE</li>
+<li><strong>SQL Server:</strong> SNAPSHOT isolation level</li>
+</ul>
+<p><strong>Question:</strong> &quot;What is a database transaction? How is atomicity ensured?&quot;</p>
+<ul>
+<li><strong>Technical:</strong> WAL (Write-Ahead Logging), redo/undo logs</li>
+</ul>
+<hr>
+<h2>⚛️ Frontend &amp; Web Development</h2>
+<h3>For SDE (Web) and PM-T Roles</h3>
+<h4>JavaScript Fundamentals</h4>
+<p><strong>Question:</strong> &quot;Explain event bubbling and capturing&quot;</p>
+<ul>
+<li><strong>Follow-up:</strong> &quot;Implement event delegation&quot;</li>
+<li><strong>Campus:</strong> IIIT Hyderabad 2025</li>
+</ul>
+<p><strong>Question:</strong> &quot;What are Promises? Implement Promise.all()&quot;</p>
+<ul>
+<li><strong>Asked in:</strong> Frontend SDE interview</li>
+</ul>
+<pre><code class="language-javascript">// Question: Implement debounce
+// Campus: VIT 2025
+function debounce(func, delay) {
+    let timeoutId;
+    return function(...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() =&gt; func.apply(this, args), delay);
+    };
+}
+</code></pre>
+<h4>React (for Frontend Roles)</h4>
+<p><strong>Question:</strong> &quot;Explain Virtual DOM and reconciliation&quot;</p>
+<ul>
+<li><strong>Follow-up:</strong> &quot;What are React keys and why important?&quot;</li>
+</ul>
+<p><strong>Question:</strong> &quot;useState vs useReducer - when to use which?&quot;</p>
+<ul>
+<li><strong>Campus:</strong> IIT Delhi 2024 (Frontend SDE)</li>
+</ul>
+<p><strong>Question:</strong> &quot;How would you optimize a large list in React?&quot;</p>
+<ul>
+<li><strong>Answer:</strong> Virtualization (react-window), pagination, lazy loading</li>
+</ul>
+<h4>Web Performance</h4>
+<p><strong>Question:</strong> &quot;How to optimize website load time?&quot;</p>
+<ul>
+<li><strong>Topics:</strong> Code splitting, lazy loading, CDN, caching, compression</li>
+<li><strong>Microsoft Context:</strong> Office Online performance</li>
+</ul>
+<p><strong>Question:</strong> &quot;Explain Critical Rendering Path&quot;</p>
+<ul>
+<li><strong>Follow-up:</strong> &quot;How does async/defer work in script tags?&quot;</li>
+</ul>
+<h4>TypeScript (Increasingly Common)</h4>
+<p><strong>Question:</strong> &quot;What are TypeScript generics? Give an example&quot;</p>
+<ul>
+<li><strong>Microsoft Context:</strong> VS Code, TypeScript teams</li>
+</ul>
+<p><strong>Question:</strong> &quot;Explain interfaces vs types in TypeScript&quot;</p>
+<ul>
+<li><strong>Campus:</strong> BITS Pilani 2024</li>
+</ul>
+<hr>
+<h2>🤝 HR &amp; Behavioral Questions</h2>
+<h3>Microsoft&#39;s Core Values Focus</h3>
+<p>Microsoft emphasizes <strong>Growth Mindset</strong> and <strong>Customer Obsession</strong> in behavioral rounds.</p>
+<h4>1. Growth Mindset Questions</h4>
+<p><strong>Question:</strong> &quot;Tell me about a time you learned a new technology quickly&quot;</p>
+<ul>
+<li><strong>STAR Format:</strong> Emphasize curiosity and learning process</li>
+<li><strong>Campus Tip:</strong> Use hackathon or project examples</li>
+<li><strong>Example:</strong> &quot;For my final year project, I learned React in 2 weeks...&quot;</li>
+</ul>
+<p><strong>Question:</strong> &quot;Describe a failure and what you learned&quot;</p>
+<ul>
+<li><strong>Key:</strong> Focus on growth and takeaways, not excuses</li>
+<li><strong>Campus:</strong> IIT Bombay 2024 - &quot;They really wanted to hear about learnings&quot;</li>
+</ul>
+<p><strong>Question:</strong> &quot;How do you stay updated with technology?&quot;</p>
+<ul>
+<li><strong>Good Answers:</strong> Blogs, open source, side projects, courses</li>
+<li><strong>Show:</strong> Genuine passion for learning</li>
+</ul>
+<h4>2. Collaboration &amp; Teamwork</h4>
+<p><strong>Question:</strong> &quot;Tell me about a time you worked with a difficult team member&quot;</p>
+<ul>
+<li><strong>Key:</strong> Show empathy, communication, conflict resolution</li>
+<li><strong>Campus Experience:</strong> &quot;Used college group project example&quot;</li>
+</ul>
+<p><strong>Question:</strong> &quot;Describe a time you influenced without authority&quot;</p>
+<ul>
+<li><strong>Context:</strong> Cross-functional collaboration</li>
+<li><strong>Microsoft Context:</strong> Teams work across orgs</li>
+</ul>
+<h4>3. Customer Obsession</h4>
+<p><strong>Question:</strong> &quot;Tell me about a time you went above and beyond for a user/customer&quot;</p>
+<ul>
+<li><strong>Campus Tip:</strong> If no work experience, use college project users</li>
+</ul>
+<p><strong>Question:</strong> &quot;How would you handle negative user feedback?&quot;</p>
+<ul>
+<li><strong>Show:</strong> Empathy, analytical approach, improvement focus</li>
+</ul>
+<h4>4. Innovation</h4>
+<p><strong>Question:</strong> &quot;Tell me about an innovative solution you implemented&quot;</p>
+<ul>
+<li><strong>Microsoft Values:</strong> Innovation is core to culture</li>
+<li><strong>Examples:</strong> Automation, optimization, creative problem-solving</li>
+</ul>
+<h3>Standard Questions</h3>
+<h4>1. &quot;Why Microsoft?&quot;</h4>
+<p><strong>Good Answers:</strong></p>
+<ul>
+<li>Democratizing technology (mission statement)</li>
+<li>Growth mindset culture</li>
+<li>Work-life balance (Microsoft is known for this)</li>
+<li>Diverse product portfolio</li>
+<li>Cloud computing leadership (Azure)
+<strong>Avoid:</strong> Just salary or brand name</li>
+</ul>
+<h4>2. &quot;Tell me about yourself&quot;</h4>
+<ul>
+<li><strong>Structure:</strong> Present (current studies/work) → Past (relevant experience) → Future (career goals)</li>
+<li><strong>Duration:</strong> 2 minutes max</li>
+<li><strong>Tip:</strong> Connect to the role you&#39;re interviewing for</li>
+</ul>
+<h4>3. &quot;Biggest strength?&quot;</h4>
+<ul>
+<li><strong>Back with examples:</strong> &quot;I&#39;m a quick learner - learned Django in a week for hackathon&quot;</li>
+<li><strong>Align:</strong> With job requirements</li>
+</ul>
+<h4>4. &quot;Biggest weakness?&quot;</h4>
+<ul>
+<li><strong>Show self-awareness:</strong> Real weakness, not humble brag</li>
+<li><strong>Improvement:</strong> What you&#39;re doing about it</li>
+<li><strong>Example:</strong> &quot;I tend to dive deep into problems and lose track of time. Now I use Pomodoro technique...&quot;</li>
+</ul>
+<h4>5. &quot;Where do you see yourself in 5 years?&quot;</h4>
+<ul>
+<li><strong>Align:</strong> With Microsoft&#39;s career path (SDE → Senior SDE → Principal)</li>
+<li><strong>Show:</strong> Ambition but also realism</li>
+<li><strong>Avoid:</strong> &quot;I want to start my own company&quot; (red flag)</li>
+</ul>
+<h3>Questions to Ask Interviewer</h3>
+<ol>
+<li>&quot;What&#39;s the team&#39;s biggest technical challenge right now?&quot;</li>
+<li>&quot;How does Microsoft foster growth mindset in day-to-day work?&quot;</li>
+<li>&quot;What&#39;s the balance between product work and infrastructure work?&quot;</li>
+<li>&quot;How does the team handle work-life balance?&quot;</li>
+<li>&quot;What&#39;s your favorite part about working at Microsoft?&quot;</li>
+</ol>
+<hr>
+<h2>🧩 Aptitude &amp; Puzzles</h2>
+<h3>Logical Puzzles</h3>
+<h4>1. 9 Balls Problem</h4>
+<p><strong>Question:</strong> &quot;9 balls, 1 defective (heavier). 2 weighings to find it?&quot;
+<strong>Answer:</strong> Divide into 3 groups of 3</p>
+<ul>
+<li><strong>Campus:</strong> NIT Trichy 2024</li>
+</ul>
+<h4>2. Egg Drop Problem</h4>
+<p><strong>Question:</strong> &quot;2 eggs, 100 floors. Find threshold floor with minimum drops&quot;
+<strong>Answer:</strong> 14 drops in worst case</p>
+<ul>
+<li><strong>Campus:</strong> IIT Kanpur 2024 - &quot;Classic Microsoft question&quot;</li>
+</ul>
+<h4>3. River Crossing Problem</h4>
+<p><strong>Question:</strong> &quot;Farmer, chicken, fox, grain. Cross river with 1-person boat. How?&quot;
+<strong>Answer:</strong> Classic constraint satisfaction</p>
+<ul>
+<li><strong>Asked:</strong> For analytical thinking</li>
+</ul>
+<h4>4. Light Bulb Problem</h4>
+<p><strong>Question:</strong> &quot;3 switches, 1 bulb in closed room. One trip to determine which switch?&quot;
+<strong>Answer:</strong> Turn on switch1 for 5 minutes, turn off, turn on switch2, enter room</p>
+<ul>
+<li><strong>Check:</strong> Hot &amp; off → switch1, On → switch2, Cold &amp; off → switch3</li>
+</ul>
+<h3>Math Problems</h3>
+<h4>1. Card Shuffle</h4>
+<p><strong>Question:</strong> &quot;52 cards. How many shuffles to return to original order?&quot;
+<strong>Answer:</strong> Depends on shuffle type. For perfect riffle shuffle: 8 shuffles</p>
+<h4>2. Clock Hands Overlap</h4>
+<p><strong>Question:</strong> &quot;How many times do clock hands overlap in 24 hours?&quot;
+<strong>Answer:</strong> 22 times (not 24)</p>
+<ul>
+<li><strong>Campus:</strong> VIT 2025</li>
+</ul>
+<h3>Coding Puzzles</h3>
+<h4>1. Integer to English Words</h4>
+<p><strong>Question:</strong> &quot;Convert 123456 to &#39;One Hundred Twenty Three Thousand Four Hundred Fifty Six&#39;&quot;</p>
+<ul>
+<li><strong>Difficulty:</strong> Medium-Hard</li>
+<li><strong>Focus:</strong> Edge cases, code organization</li>
+<li><strong>Campus:</strong> IIT Delhi 2024</li>
+</ul>
+<h4>2. Excel Column Conversion</h4>
+<p><strong>Question:</strong> &quot;Convert Excel column number to title (1 → A, 27 → AA)&quot;</p>
+<ul>
+<li><strong>Common:</strong> Excel team interviews</li>
+<li><strong>Tricky:</strong> It&#39;s base-26 but not standard (no zero)</li>
+</ul>
+<hr>
+<h2>📱 Real Campus Interview Experiences</h2>
+<h3>IIT Delhi - SDE (2024)</h3>
+<p><strong>Role:</strong> Software Engineer
+<strong>Team:</strong> Azure</p>
+<p><strong>Online Assessment:</strong></p>
+<ul>
+<li>Platform: HackerRank</li>
+<li>Questions: 3 questions, 90 minutes</li>
+<li>Q1: String manipulation (Easy)</li>
+<li>Q2: LRU Cache (Medium)</li>
+<li>Q3: Tree traversal problem (Medium)</li>
+<li>Cutoff: 2.5/3 questions</li>
+</ul>
+<p><strong>Round 1 - Technical Interview (Virtual):</strong></p>
+<ul>
+<li>Duration: 60 minutes</li>
+<li>Coding: Add Two Numbers (Linked List)</li>
+<li>Follow-up: Handle negative numbers, large numbers</li>
+<li>OS: Process vs Thread, Deadlock conditions</li>
+<li>Behavioral: Tell about yourself, why Microsoft</li>
+<li>Interviewer: Senior SDE from Hyderabad office</li>
+</ul>
+<p><strong>Round 2 - Technical Interview:</strong></p>
+<ul>
+<li>Duration: 60 minutes</li>
+<li>Coding: Course Schedule (Medium)</li>
+<li>Had to explain topological sort clearly</li>
+<li>DBMS: SQL query - rank scores</li>
+<li>Behavioral: Describe a challenging project</li>
+</ul>
+<p><strong>Round 3 - Technical + Managerial:</strong></p>
+<ul>
+<li>Duration: 45 minutes</li>
+<li>Coding: Design Browser History (Medium)</li>
+<li>Discussion about data structures choice</li>
+<li>Behavioral: Growth mindset questions</li>
+<li>Manager round - focus on culture fit</li>
+</ul>
+<p><strong>Round 4 - HR:</strong></p>
+<ul>
+<li>Duration: 30 minutes</li>
+<li>Standard HR questions</li>
+<li>Salary discussion</li>
+<li>Joining timeline</li>
+</ul>
+<p><strong>Offer:</strong> 42 LPA CTC (Base: 20, Bonus: 3, RSU: 16, Joining: 3)
+<strong>Location:</strong> Hyderabad</p>
+<p><strong>Experience:</strong>
+&quot;The interviewers were very friendly and collaborative. They care about your thought process more than getting the perfect solution immediately. They nudge you in the right direction if you&#39;re stuck. Behavioral rounds are important - they really assess cultural fit. Work-life balance is a big talking point at Microsoft compared to other companies.&quot;</p>
+<h3>BITS Pilani - SDE-2 (2024, Off-Campus)</h3>
+<p><strong>Background:</strong> 3 years experience at startup</p>
+<p><strong>Phone Screen:</strong></p>
+<ul>
+<li>Duration: 60 minutes</li>
+<li>Coding: Minimum Window Substring (Hard)</li>
+<li>Got optimal solution, discussed alternatives</li>
+<li>Behavioral: Why leaving current company?</li>
+<li>Result: Selected for on-site</li>
+</ul>
+<p><strong>On-site (Bangalore Office):</strong></p>
+<p><strong>Round 1 - DSA:</strong></p>
+<ul>
+<li>Duration: 60 minutes</li>
+<li>Question 1: Merge K Sorted Lists (Hard)</li>
+<li>Question 2: Implement Trie with wildcard search</li>
+<li>Completed both, discussed time complexity</li>
+</ul>
+<p><strong>Round 2 - System Design:</strong></p>
+<ul>
+<li>Duration: 60 minutes</li>
+<li>Design: OneDrive file sync system</li>
+<li>Deep dive into chunking algorithm</li>
+<li>Discussed conflict resolution strategies</li>
+<li>Interviewer was Staff Engineer</li>
+</ul>
+<p><strong>Round 3 - DSA + Architecture:</strong></p>
+<ul>
+<li>Duration: 45 minutes</li>
+<li>Coding: Excel Sheet Column Number (Medium)</li>
+<li>Architecture discussion about previous projects</li>
+<li>Tradeoffs in microservices</li>
+</ul>
+<p><strong>Round 4 - Behavioral + Managerial:</strong></p>
+<ul>
+<li>Duration: 45 minutes</li>
+<li>Hiring manager round</li>
+<li>Deep dive into past projects</li>
+<li>Team fit assessment</li>
+<li>Discussed team structure and projects</li>
+</ul>
+<p><strong>Round 5 - &quot;As Appropriate&quot; (AA):</strong></p>
+<ul>
+<li>Duration: 30 minutes</li>
+<li>Senior leader (Director level)</li>
+<li>High-level behavioral questions</li>
+<li>Final culture fit check</li>
+<li>Note: AA round happens only if first 4 rounds are borderline</li>
+</ul>
+<p><strong>Offer:</strong> 65 LPA CTC
+<strong>Location:</strong> Bangalore
+<strong>Team:</strong> Microsoft 365</p>
+<p><strong>Experience:</strong>
+&quot;As an experienced hire, bar was higher. System design is crucial. They expect you to drive the discussion. Don&#39;t wait for hints - propose solutions proactively. The &#39;As Appropriate&#39; round means you&#39;re on the edge; it&#39;s a tiebreaker. I was nervous but it went well. Microsoft has a mature interview process with structured feedback.&quot;</p>
+<h3>VIT Vellore - SDE Intern (2025)</h3>
+<p><strong>Role:</strong> Summer Intern (2 months)</p>
+<p><strong>Online Test:</strong></p>
+<ul>
+<li>MCQs: Aptitude (20q), Technical (30q)</li>
+<li>Coding: 2 questions (60 min)</li>
+<li>Q1: Reverse String (Easy)</li>
+<li>Q2: Find Anagrams in String (Medium)</li>
+</ul>
+<p><strong>Interview Round 1:</strong></p>
+<ul>
+<li>Duration: 30 minutes</li>
+<li>Coding: Remove Duplicates from Sorted Array</li>
+<li>Basic OS questions</li>
+<li>Academic project discussion</li>
+</ul>
+<p><strong>Interview Round 2:</strong></p>
+<ul>
+<li>Duration: 30 minutes</li>
+<li>HR questions</li>
+<li>Why Microsoft for internship?</li>
+<li>Career aspirations</li>
+</ul>
+<p><strong>Offer:</strong> INR 80,000/month stipend
+<strong>Location:</strong> Hyderabad</p>
+<p><strong>Experience:</strong>
+&quot;For interns, the bar is lower than full-time SDE. Focus on fundamentals. They want to see potential and enthusiasm to learn. Don&#39;t be intimidated - they&#39;re evaluating based on what&#39;s reasonable for your experience level.&quot;</p>
+<hr>
+<h2>📊 Microsoft India Salary Ranges (2024-2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Level</th>
+<th>Experience</th>
+<th>CTC Range (LPA)</th>
+<th>Base+Bonus (LPA)</th>
+<th>RSU (4yr)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SDE</td>
+<td>59</td>
+<td>0-2 years</td>
+<td>38-45</td>
+<td>22-26</td>
+<td>12-16</td>
+</tr>
+<tr>
+<td>SDE II</td>
+<td>60</td>
+<td>2-4 years</td>
+<td>50-70</td>
+<td>30-40</td>
+<td>16-24</td>
+</tr>
+<tr>
+<td>Senior SDE</td>
+<td>61</td>
+<td>4-7 years</td>
+<td>75-100</td>
+<td>45-60</td>
+<td>24-36</td>
+</tr>
+<tr>
+<td>Principal SDE</td>
+<td>62</td>
+<td>7-10 years</td>
+<td>110-160</td>
+<td>65-90</td>
+<td>40-60</td>
+</tr>
+<tr>
+<td>Partner SDE</td>
+<td>63</td>
+<td>10+ years</td>
+<td>170-250+</td>
+<td>95-130</td>
+<td>70-120</td>
+</tr>
+</tbody></table>
+<p><strong>Intern:</strong> 60,000-90,000/month stipend</p>
+<p><strong>Locations:</strong> Hyderabad (largest), Bangalore, NCR (Noida/Gurgaon)</p>
+<p><strong>Note:</strong> Microsoft offers excellent work-life balance and benefits (health insurance, parental leave, learning stipend)</p>
+<hr>
+<h2>🎯 Preparation Strategy for Microsoft</h2>
+<h3>For SDE (0-2 years)</h3>
+<p><strong>Timeline: 4-5 months</strong></p>
+<p><strong>Month 1-2: DSA Foundation</strong></p>
+<ul>
+<li>Focus on arrays, strings, linked lists, trees</li>
+<li>Microsoft-tagged LeetCode questions (400+)</li>
+<li>Target: 100 easy + 75 medium</li>
+</ul>
+<p><strong>Month 3: DSA + SQL</strong></p>
+<ul>
+<li>Continue medium/hard DSA</li>
+<li>Practice SQL queries (important for Microsoft)</li>
+<li>OS concepts revision</li>
+<li>Target: Additional 75 medium + 15 hard</li>
+</ul>
+<p><strong>Month 4: System Design Basics</strong></p>
+<ul>
+<li>For SDE-2 and above</li>
+<li>Focus on Microsoft products (Teams, OneDrive, Office)</li>
+<li>Practice explaining architectures</li>
+</ul>
+<p><strong>Month 5: Polish + Behavioral</strong></p>
+<ul>
+<li>Mock interviews</li>
+<li>STAR format behavioral answers</li>
+<li>Growth mindset examples</li>
+<li>Revisit all patterns</li>
+</ul>
+<h3>Key Resources</h3>
+<ol>
+<li><strong>LeetCode:</strong> Microsoft company tag (400+ questions)</li>
+<li><strong>SQL:</strong> LeetCode database problems</li>
+<li><strong>System Design:</strong> Gaurav Sen, System Design Primer</li>
+<li><strong>Behavioral:</strong> Microsoft Life blogs, culture videos</li>
+<li><strong>Books:</strong> Cracking the Coding Interview</li>
+</ol>
+<h3>Microsoft Interview Tips</h3>
+<ol>
+<li><strong>Collaborative Approach:</strong> Interviewers help you - accept hints gracefully</li>
+<li><strong>Communication:</strong> Think aloud, explain your approach</li>
+<li><strong>Growth Mindset:</strong> Show willingness to learn, not just perfection</li>
+<li><strong>Product Knowledge:</strong> Know Microsoft products you use</li>
+<li><strong>Cultural Fit:</strong> Work-life balance is important to Microsoft, show you value it</li>
+<li><strong>Ask Questions:</strong> Show genuine interest in team and projects</li>
+</ol>
+<h3>Success Rates</h3>
+<ul>
+<li><strong>Campus Placements:</strong> ~15-20% selection rate from OA</li>
+<li><strong>Off-Campus:</strong> ~5-8% overall</li>
+<li><strong>Intern to FTE:</strong> ~70% conversion rate</li>
+</ul>
+<p><strong>Bottom Line:</strong> Microsoft interviews are challenging but fair. Interviewers are collaborative and want you to succeed. Strong fundamentals + good communication = high success chance. Work-life balance and growth mindset are core to Microsoft culture - align your answers accordingly.</p>
+<hr>
+<h1>Flipkart</h1>
+<h2>Interview Process Overview</h2>
+<ul>
+<li><strong>Rounds:</strong> 3-4 rounds</li>
+<li><strong>Duration:</strong> 2-3 weeks</li>
+<li><strong>Focus:</strong> DSA (High), System Design (for SDE-2+), Problem-solving, E-commerce scenarios</li>
+<li><strong>Coding Platform:</strong> HackerRank, CoderPad, or Google Docs</li>
+<li><strong>Common Roles:</strong> SDE-1, SDE-2, SDET</li>
+<li><strong>Unique:</strong> Strong focus on e-commerce domain problems</li>
+</ul>
+<h2>🎯 Common DSA Patterns</h2>
+<h3>Pattern Frequency</h3>
+<ol>
+<li><strong>Arrays &amp; Strings</strong> (30%)</li>
+<li><strong>Trees &amp; Graphs</strong> (20%)</li>
+<li><strong>Dynamic Programming</strong> (15%)</li>
+<li><strong>Hash Maps</strong> (12%)</li>
+<li><strong>Design Problems</strong> (13%)</li>
+<li><strong>E-commerce Specific</strong> (10%)</li>
+</ol>
+<hr>
+<h2>💻 DSA Questions by Difficulty</h2>
+<h3>Easy-Medium Questions</h3>
+<h4>1. Find Missing Number</h4>
+<ul>
+<li><strong>Difficulty:</strong> Easy</li>
+<li><strong>Topic:</strong> Arrays, Math</li>
+<li><strong>Asked in:</strong> Online Assessment</li>
+<li><strong>Campus:</strong> Common warmup question</li>
+</ul>
+<h4>2. Merge Intervals</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Arrays, Sorting</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2 (Very Common)</li>
+<li><strong>E-commerce Context:</strong> Delivery time slots, offer periods</li>
+<li><strong>Campus:</strong> IIT Kharagpur 2024</li>
+<li><strong>Follow-up:</strong> Insert interval, merge overlapping intervals</li>
+</ul>
+<h4>3. Product of Array Except Self</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Arrays</li>
+<li><strong>Asked in:</strong> SDE-1 Interview</li>
+<li><strong>E-commerce:</strong> Price calculations</li>
+<li><strong>Campus:</strong> BITS Pilani 2025</li>
+</ul>
+<h4>4. Group Anagrams</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Hash Map, String</li>
+<li><strong>Asked in:</strong> SDE-1 Round 1</li>
+<li><strong>Campus:</strong> NIT Trichy 2024</li>
+</ul>
+<h4>5. Top K Frequent Elements</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Heap, Hash Map</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2</li>
+<li><strong>E-commerce Context:</strong> Top K products, trending searches</li>
+<li><strong>Optimal:</strong> Bucket sort O(n)</li>
+</ul>
+<h4>6. Binary Tree Level Order Traversal</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Tree, BFS</li>
+<li><strong>Asked in:</strong> SDE-1 Interview</li>
+<li><strong>Campus:</strong> VIT 2024</li>
+</ul>
+<h4>7. Valid Sudoku</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Arrays, Hash Set</li>
+<li><strong>Asked in:</strong> SDE-1 Round 2</li>
+<li><strong>Campus:</strong> IIT Roorkee 2025</li>
+</ul>
+<h4>8. Spiral Matrix</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Matrix</li>
+<li><strong>Asked in:</strong> Online Assessment</li>
+<li><strong>Campus:</strong> IIIT Hyderabad 2024</li>
+</ul>
+<h4>9. Design HashMap</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Design, Array, Linked List</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2</li>
+<li><strong>Key:</strong> Handle collisions (chaining or open addressing)</li>
+</ul>
+<h4>10. Clone Graph</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Graph, DFS/BFS, Hash Map</li>
+<li><strong>Asked in:</strong> SDE-2 Interview</li>
+</ul>
+<hr>
+<h3>Medium-Hard Questions</h3>
+<h4>1. Longest Consecutive Sequence</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Arrays, Hash Set</li>
+<li><strong>Asked in:</strong> SDE-1 Round 2</li>
+<li><strong>Key:</strong> O(n) solution using hash set</li>
+<li><strong>Campus:</strong> IIT Bombay 2024</li>
+</ul>
+<h4>2. Word Break</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Dynamic Programming, BFS</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2</li>
+<li><strong>E-commerce:</strong> Search query parsing</li>
+<li><strong>Campus:</strong> IIT Delhi 2024</li>
+</ul>
+<h4>3. Meeting Rooms II</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Intervals, Heap</li>
+<li><strong>Asked in:</strong> SDE-2 Interview</li>
+<li><strong>E-commerce:</strong> Delivery slot management</li>
+<li><strong>Campus:</strong> BITS Pilani 2024</li>
+</ul>
+<h4>4. Design LRU Cache</h4>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Topic:</strong> Design, Hash Map, Doubly Linked List</li>
+<li><strong>Asked in:</strong> Very Common (40% of interviews)</li>
+<li><strong>E-commerce:</strong> Product cache, session cache</li>
+<li><strong>Campus:</strong> Almost all IITs, NITs</li>
+<li><strong>Must:</strong> O(1) get and put operations</li>
+</ul>
+<h4>5. Serialize and Deserialize Binary Tree</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Tree, DFS/BFS, Design</li>
+<li><strong>Asked in:</strong> SDE-2 Interview</li>
+<li><strong>Campus:</strong> IIT Kanpur 2024</li>
+</ul>
+<h4>6. Trapping Rain Water</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Arrays, Two Pointers, Stack</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2</li>
+<li><strong>Campus:</strong> IIT Madras 2024</li>
+<li><strong>Multiple Approaches:</strong> Brute force, DP, two pointers, stack</li>
+</ul>
+<h4>7. Word Ladder</h4>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Topic:</strong> Graph, BFS</li>
+<li><strong>Asked in:</strong> SDE-2 Round 2</li>
+<li><strong>Campus:</strong> BITS Pilani 2025</li>
+</ul>
+<hr>
+<h2>🛒 E-commerce Specific Problems</h2>
+<h3>1. Design Shopping Cart</h3>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2 (Very Common)</li>
+<li><strong>Requirements:</strong><ul>
+<li>Add/remove products</li>
+<li>Update quantity</li>
+<li>Apply coupons</li>
+<li>Calculate total with discounts and taxes</li>
+</ul>
+</li>
+<li><strong>Edge Cases:</strong> Stock availability, concurrent updates</li>
+<li><strong>Campus:</strong> IIT Delhi 2024</li>
+<li><strong>Campus Experience:</strong> &quot;Had to handle race conditions when multiple users buy last item&quot;</li>
+</ul>
+<h3>2. Product Recommendation System</h3>
+<ul>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Asked in:</strong> SDE-2, Data Science roles</li>
+<li><strong>Approaches:</strong><ul>
+<li>Collaborative filtering</li>
+<li>Content-based filtering</li>
+<li>Hybrid approach</li>
+</ul>
+</li>
+<li><strong>Campus:</strong> IIT Bombay 2024</li>
+</ul>
+<h3>3. Inventory Management</h3>
+<ul>
+<li><strong>Question:</strong> &quot;Design a system to track product inventory across warehouses&quot;</li>
+<li><strong>Difficulty:</strong> Medium-Hard</li>
+<li><strong>Focus:</strong> Real-time updates, reservations, distributed system</li>
+<li><strong>Campus:</strong> IIT Madras 2025</li>
+</ul>
+<h3>4. Order Status Tracker</h3>
+<ul>
+<li><strong>Question:</strong> &quot;Implement order lifecycle tracking (Placed → Packed → Shipped → Delivered)&quot;</li>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>State Machine:</strong> Design state transitions</li>
+<li><strong>Asked in:</strong> SDE-1 Interview</li>
+</ul>
+<h3>5. Flash Sale System</h3>
+<ul>
+<li><strong>Question:</strong> &quot;Design a flash sale where 100 items available, 10000 users trying to buy&quot;</li>
+<li><strong>Difficulty:</strong> Hard</li>
+<li><strong>Focus:</strong> Concurrency, queuing, fairness</li>
+<li><strong>Campus:</strong> IIT Kharagpur 2024</li>
+<li><strong>Key Topics:</strong><ul>
+<li>Distributed locks</li>
+<li>Message queues</li>
+<li>Eventual consistency</li>
+</ul>
+</li>
+</ul>
+<h3>6. Search Autocomplete</h3>
+<ul>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Asked in:</strong> SDE-1, SDE-2</li>
+<li><strong>Data Structure:</strong> Trie</li>
+<li><strong>Ranking:</strong> Query frequency, personalization</li>
+<li><strong>Campus:</strong> BITS Pilani 2024</li>
+</ul>
+<h3>7. Coupon Validation System</h3>
+<ul>
+<li><strong>Question:</strong> &quot;Validate coupon codes with various constraints (min order value, user-specific, time-bound)&quot;</li>
+<li><strong>Difficulty:</strong> Medium</li>
+<li><strong>Asked in:</strong> SDE-1 Interview</li>
+<li><strong>Campus:</strong> VIT 2025</li>
+</ul>
+<hr>
+<h2>🏗️ System Design Questions</h2>
+<h3>For SDE-2 and Above</h3>
+<h4>1. Design Flipkart</h4>
+<ul>
+<li><strong>Complexity:</strong> Very High</li>
+<li><strong>Asked in:</strong> SDE-2, SDE-3</li>
+<li><strong>Campus:</strong> IIT Bombay 2024</li>
+<li><strong>Components:</strong><ul>
+<li>User service</li>
+<li>Product catalog</li>
+<li>Inventory management</li>
+<li>Order management</li>
+<li>Payment gateway</li>
+<li>Recommendation engine</li>
+<li>Search service</li>
+<li>Notification service</li>
+</ul>
+</li>
+<li><strong>Focus Areas:</strong><ul>
+<li>Microservices architecture</li>
+<li>Database sharding</li>
+<li>Caching strategy</li>
+<li>CAP theorem trade-offs</li>
+</ul>
+</li>
+</ul>
+<h4>2. Design Flash Sale System</h4>
+<ul>
+<li><strong>Complexity:</strong> High</li>
+<li><strong>Asked in:</strong> SDE-2 Interview</li>
+<li><strong>Focus:</strong> Handle millions of concurrent requests</li>
+<li><strong>Key Challenges:</strong><ul>
+<li>Inventory consistency</li>
+<li>Fair queuing</li>
+<li>Bot prevention</li>
+<li>System overload prevention</li>
+</ul>
+</li>
+<li><strong>Solutions:</strong><ul>
+<li>Queue-based approach (Kafka)</li>
+<li>Distributed locks (Redis)</li>
+<li>Rate limiting</li>
+<li>CDN for static content</li>
+</ul>
+</li>
+</ul>
+<h4>3. Design Product Search</h4>
+<ul>
+<li><strong>Complexity:</strong> High</li>
+<li><strong>Asked in:</strong> SDE-2 Interview</li>
+<li><strong>Campus:</strong> IIT Delhi 2024</li>
+<li><strong>Components:</strong><ul>
+<li>Elasticsearch / Solr for indexing</li>
+<li>Autocomplete (Trie)</li>
+<li>Filters and facets</li>
+<li>Ranking algorithm</li>
+<li>Personalization</li>
+</ul>
+</li>
+<li><strong>Scale:</strong> Millions of products, high read QPS</li>
+</ul>
+<h4>4. Design Order Management System</h4>
+<ul>
+<li><strong>Complexity:</strong> Medium-High</li>
+<li><strong>Asked in:</strong> SDE-2 Interview</li>
+<li><strong>Workflow:</strong><ul>
+<li>Order placement</li>
+<li>Payment processing</li>
+<li>Inventory reservation</li>
+<li>Warehouse allocation</li>
+<li>Shipping</li>
+<li>Delivery tracking</li>
+<li>Returns and refunds</li>
+</ul>
+</li>
+<li><strong>Focus:</strong> State machine, distributed transactions</li>
+</ul>
+<h4>5. Design Notification System</h4>
+<ul>
+<li><strong>Complexity:</strong> Medium</li>
+<li><strong>Asked in:</strong> SDE-2 Interview</li>
+<li><strong>Types:</strong> Push, SMS, Email, In-app</li>
+<li><strong>Challenges:</strong><ul>
+<li>Scalability</li>
+<li>Priority handling</li>
+<li>Delivery guarantees</li>
+<li>User preferences</li>
+</ul>
+</li>
+</ul>
+<h4>6. Design Product Recommendation Engine</h4>
+<ul>
+<li><strong>Complexity:</strong> High</li>
+<li><strong>Asked in:</strong> Data-focused SDE-2 roles</li>
+<li><strong>Approaches:</strong><ul>
+<li>Collaborative filtering (user-user, item-item)</li>
+<li>Content-based filtering</li>
+<li>Hybrid methods</li>
+</ul>
+</li>
+<li><strong>Real-time:</strong> Kafka + Spark Streaming</li>
+<li><strong>Offline:</strong> Batch processing for model training</li>
+</ul>
+<hr>
+<h2>💾 OS &amp; DBMS Concepts</h2>
+<h3>Operating Systems</h3>
+<p><strong>Question:</strong> &quot;Explain multi-threading and when to use it&quot;</p>
+<ul>
+<li><strong>Flipkart Context:</strong> Handling concurrent user requests</li>
+<li><strong>Campus:</strong> Asked in 50% of interviews</li>
+</ul>
+<p><strong>Question:</strong> &quot;What is a deadlock? How to prevent it?&quot;</p>
+<ul>
+<li><strong>Real Scenario:</strong> Database transaction deadlocks</li>
+<li><strong>Campus:</strong> IIT Delhi 2024</li>
+</ul>
+<p><strong>Question:</strong> &quot;Process vs Thread with example&quot;</p>
+<ul>
+<li><strong>Example:</strong> Flipkart app - multiple threads for API calls, UI rendering</li>
+</ul>
+<p><strong>Question:</strong> &quot;Explain virtual memory&quot;</p>
+<ul>
+<li><strong>Follow-up:</strong> &quot;What happens when RAM is full?&quot;</li>
+</ul>
+<h3>Database Management Systems</h3>
+<h4>SQL Questions</h4>
+<h5>1. Top 5 Products by Sales</h5>
+<pre><code class="language-sql">-- Question: Find top 5 products by total sales amount
+-- Campus: BITS Pilani 2024
+
+SELECT product_id, SUM(quantity * price) as total_sales
+FROM Orders
+GROUP BY product_id
+ORDER BY total_sales DESC
+LIMIT 5;
+</code></pre>
+<h5>2. User Orders Count</h5>
+<pre><code class="language-sql">-- Question: Find users who have placed more than 10 orders in last 30 days
+-- Campus: IIT Kanpur 2024
+
+SELECT user_id, COUNT(*) as order_count
+FROM Orders
+WHERE order_date &gt;= DATE_SUB(CURDATE(), INTERVAL 30 DAY)
+GROUP BY user_id
+HAVING COUNT(*) &gt; 10;
+</code></pre>
+<h5>3. Product Categories</h5>
+<pre><code class="language-sql">-- Question: Get products with their categories (handle null categories)
+-- Campus: NIT Surathkal 2024
+
+SELECT p.product_name, COALESCE(c.category_name, &#39;Uncategorized&#39;) as category
+FROM Products p
+LEFT JOIN Categories c ON p.category_id = c.id;
+</code></pre>
+<h4>Conceptual Questions</h4>
+<p><strong>Question:</strong> &quot;Explain database indexing with example&quot;</p>
+<ul>
+<li><strong>Flipkart Example:</strong> Index on <code>user_id</code> in <code>Orders</code> table</li>
+<li><strong>Trade-off:</strong> Faster reads, slower writes</li>
+<li><strong>Campus:</strong> IIT Bombay 2024</li>
+</ul>
+<p><strong>Question:</strong> &quot;What is database normalization? When to denormalize?&quot;</p>
+<ul>
+<li><strong>Flipkart Example:</strong> Denormalize for analytics/reporting</li>
+<li><strong>Campus:</strong> IIT Madras 2024</li>
+</ul>
+<p><strong>Question:</strong> &quot;ACID properties with e-commerce example&quot;</p>
+<ul>
+<li><strong>Example:</strong> Payment transaction must be atomic</li>
+<li><strong>Campus:</strong> Asked in 60% of interviews</li>
+</ul>
+<p><strong>Question:</strong> &quot;SQL vs NoSQL - when to use which?&quot;</p>
+<ul>
+<li><strong>Flipkart:</strong> SQL for orders/transactions, NoSQL for product catalog, caching</li>
+<li><strong>Campus:</strong> BITS Pilani 2025</li>
+</ul>
+<p><strong>Question:</strong> &quot;Explain different isolation levels&quot;</p>
+<ul>
+<li><strong>Real Issue:</strong> Lost updates, dirty reads in concurrent orders</li>
+<li><strong>Campus:</strong> IIT Delhi 2024</li>
+</ul>
+<p><strong>Question:</strong> &quot;How to handle database sharding?&quot;</p>
+<ul>
+<li><strong>Flipkart Scale:</strong> Shard by user_id or region</li>
+<li><strong>Challenges:</strong> Cross-shard queries, rebalancing</li>
+</ul>
+<hr>
+<h2>⚛️ Frontend &amp; Web Development</h2>
+<h3>For Frontend SDE Roles</h3>
+<h4>JavaScript</h4>
+<p><strong>Question:</strong> &quot;Implement debounce for search box&quot;</p>
+<ul>
+<li><strong>Flipkart Context:</strong> Product search autocomplete</li>
+<li><strong>Campus:</strong> IIIT Hyderabad 2024</li>
+</ul>
+<p><strong>Question:</strong> &quot;Explain event loop and asynchronous JavaScript&quot;</p>
+<ul>
+<li><strong>Code:</strong> Predict output of setTimeout, Promise</li>
+</ul>
+<p><strong>Question:</strong> &quot;What are closures? Give practical example&quot;</p>
+<ul>
+<li><strong>Example:</strong> Event handlers, data privacy</li>
+</ul>
+<h4>React</h4>
+<p><strong>Question:</strong> &quot;How to optimize a product listing page with 1000 items?&quot;</p>
+<ul>
+<li><strong>Answer:</strong> Virtualization (react-window), pagination, lazy loading</li>
+<li><strong>Campus:</strong> IIT Delhi 2024</li>
+</ul>
+<p><strong>Question:</strong> &quot;Explain React hooks - useState, useEffect, useCallback&quot;</p>
+<ul>
+<li><strong>Flipkart Context:</strong> Managing cart state</li>
+<li><strong>Campus:</strong> VIT 2025</li>
+</ul>
+<p><strong>Question:</strong> &quot;How would you implement a shopping cart in React?&quot;</p>
+<ul>
+<li><strong>State Management:</strong> Context API vs Redux</li>
+<li><strong>Persistence:</strong> LocalStorage, server sync</li>
+<li><strong>Campus:</strong> BITS Pilani 2024</li>
+</ul>
+<h4>Web Performance</h4>
+<p><strong>Question:</strong> &quot;How to reduce page load time for Flipkart homepage?&quot;</p>
+<ul>
+<li><strong>Answers:</strong><ul>
+<li>Code splitting</li>
+<li>Lazy loading images</li>
+<li>CDN for static assets</li>
+<li>Server-side rendering (SSR) / Static generation</li>
+<li>Caching strategies</li>
+</ul>
+</li>
+<li><strong>Campus:</strong> IIT Bombay 2024</li>
+</ul>
+<hr>
+<h2>🤝 HR &amp; Behavioral Questions</h2>
+<h3>Flipkart Values Focus</h3>
+<p>Flipkart emphasizes <strong>Customer First</strong>, <strong>Ownership</strong>, and <strong>Execution Excellence</strong>.</p>
+<h4>1. Customer First</h4>
+<p><strong>Question:</strong> &quot;Tell me about a time you prioritized customer need over easy solution&quot;</p>
+<ul>
+<li><strong>E-commerce Example:</strong> &quot;Optimized search to show relevant results even with typos&quot;</li>
+<li><strong>Campus Tip:</strong> Use project examples where end-user benefited</li>
+</ul>
+<h4>2. Ownership</h4>
+<p><strong>Question:</strong> &quot;Describe a project where you took complete ownership&quot;</p>
+<ul>
+<li><strong>Key:</strong> End-to-end responsibility, proactive problem-solving</li>
+<li><strong>Campus:</strong> College fest, hackathon organization examples work</li>
+</ul>
+<h4>3. Execution Excellence</h4>
+<p><strong>Question:</strong> &quot;Tell me about a time you delivered under tight deadline&quot;</p>
+<ul>
+<li><strong>Show:</strong> Planning, prioritization, efficient execution</li>
+<li><strong>Campus:</strong> Exam preparation, project deadline examples</li>
+</ul>
+<h3>Standard Questions</h3>
+<p><strong>Question:</strong> &quot;Why Flipkart?&quot;</p>
+<ul>
+<li><strong>Good Answers:</strong><ul>
+<li>India&#39;s leading e-commerce (local impact)</li>
+<li>Challenging scale problems</li>
+<li>Innovation in logistics, payments (PhonePe)</li>
+<li>Homegrown unicorn</li>
+</ul>
+</li>
+<li><strong>Avoid:</strong> Generic answers</li>
+</ul>
+<p><strong>Question:</strong> &quot;How do you handle pressure?&quot;</p>
+<ul>
+<li><strong>Campus:</strong> Multiple assignment deadlines, exam pressure examples</li>
+</ul>
+<p><strong>Question:</strong> &quot;Describe a conflict with team member&quot;</p>
+<ul>
+<li><strong>Focus:</strong> Communication, empathy, resolution</li>
+</ul>
+<p><strong>Question:</strong> &quot;Where do you see yourself in 5 years?&quot;</p>
+<ul>
+<li><strong>Align:</strong> Technical growth path at Flipkart</li>
+</ul>
+<hr>
+<h2>🧩 Aptitude &amp; Puzzles</h2>
+<h3>Logical Reasoning</h3>
+<h4>1. Delivery Route Optimization</h4>
+<p><strong>Question:</strong> &quot;A delivery person has 5 packages to deliver. How to find shortest route?&quot;</p>
+<ul>
+<li><strong>Answer:</strong> Traveling Salesman Problem (TSP)</li>
+<li><strong>Practical:</strong> Use heuristics for large N</li>
+<li><strong>Campus:</strong> IIT Delhi 2024</li>
+</ul>
+<h4>2. Warehouse Stock Problem</h4>
+<p><strong>Question:</strong> &quot;2 warehouses, stock levels can go negative (backordering). How to track accurately?&quot;</p>
+<ul>
+<li><strong>Focus:</strong> State management, race conditions</li>
+</ul>
+<h3>Probability</h3>
+<p><strong>Question:</strong> &quot;If 10% of transactions fail, what&#39;s probability of 3 consecutive failures?&quot;</p>
+<ul>
+<li><strong>Answer:</strong> 0.1 × 0.1 × 0.1 = 0.001 = 0.1%</li>
+<li><strong>Campus:</strong> BITS Pilani 2024</li>
+</ul>
+<hr>
+<h2>📱 Real Campus Interview Experiences</h2>
+<h3>IIT Bombay - SDE-1 (2024)</h3>
+<p><strong>Online Assessment:</strong></p>
+<ul>
+<li>Platform: HackerRank</li>
+<li>Duration: 90 minutes</li>
+<li>Q1: Merge Intervals (Medium)</li>
+<li>Q2: Top K Frequent Elements (Medium)</li>
+<li>Q3: Word Break (Medium-Hard)</li>
+<li>Cutoff: 2/3 questions fully passed</li>
+</ul>
+<p><strong>Round 1 - Technical:</strong></p>
+<ul>
+<li>Duration: 60 minutes</li>
+<li>Coding: LRU Cache implementation</li>
+<li>Had to explain choice of data structures</li>
+<li>Follow-up: &quot;How would you make it thread-safe?&quot;</li>
+<li>OS: Deadlock conditions and prevention</li>
+<li>Behavioral: Why Flipkart?</li>
+</ul>
+<p><strong>Round 2 - Technical:</strong></p>
+<ul>
+<li>Duration: 60 minutes</li>
+<li>Problem: Design Shopping Cart system</li>
+<li>Requirements: Add/remove, coupons, checkout</li>
+<li>Discussed database schema</li>
+<li>Handled concurrent updates scenario</li>
+<li>Asked about race conditions</li>
+</ul>
+<p><strong>Round 3 - Hiring Manager:</strong></p>
+<ul>
+<li>Duration: 45 minutes</li>
+<li>Behavioral: Deep dive into projects</li>
+<li>Ownership and execution examples</li>
+<li>Team fit assessment</li>
+<li>Questions about team and role</li>
+</ul>
+<p><strong>Offer:</strong> 38 LPA CTC (Base: 22, Bonus: 4, RSU: 10, Joining: 2)
+<strong>Location:</strong> Bangalore</p>
+<p><strong>Experience:</strong>
+&quot;Flipkart interviews are practical and scenario-based. They ask a lot of e-commerce related problems which is refreshing - connects to real-world. Interviewers were friendly. They care about your reasoning and how you handle ambiguity. Behavioral rounds matter - they assess culture fit seriously.&quot;</p>
+<h3>BITS Pilani - SDE-2 (2024, Off-Campus)</h3>
+<p><strong>Background:</strong> 3 years experience</p>
+<p><strong>Round 1 - DSA:</strong></p>
+<ul>
+<li>Trapping Rain Water (Hard)</li>
+<li>Serialize/Deserialize Binary Tree (Hard)</li>
+<li>Both solved optimally</li>
+</ul>
+<p><strong>Round 2 - System Design:</strong></p>
+<ul>
+<li>Design Flash Sale System</li>
+<li>60 minutes deep dive</li>
+<li>Focus on concurrency, queuing, inventory consistency</li>
+</ul>
+<p><strong>Round 3 - DSA + Low-Level Design:</strong></p>
+<ul>
+<li>Meeting Rooms II (Medium)</li>
+<li>Design Coupon Validation System</li>
+<li>Class diagram and code structure</li>
+</ul>
+<p><strong>Round 4 - Bar Raiser:</strong></p>
+<ul>
+<li>Senior engineer interview</li>
+<li>Mix of technical and behavioral</li>
+<li>Past project deep dive</li>
+</ul>
+<p><strong>Offer:</strong> 52 LPA CTC
+<strong>Location:</strong> Bangalore</p>
+<hr>
+<h2>📊 Flipkart India Salary Ranges (2024-2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Experience</th>
+<th>CTC Range (LPA)</th>
+<th>Base</th>
+<th>Bonus</th>
+<th>RSU (4yr)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SDE-1</td>
+<td>0-2 years</td>
+<td>32-42</td>
+<td>18-24</td>
+<td>3-5</td>
+<td>8-12</td>
+</tr>
+<tr>
+<td>SDE-2</td>
+<td>2-5 years</td>
+<td>48-68</td>
+<td>28-38</td>
+<td>5-8</td>
+<td>12-20</td>
+</tr>
+<tr>
+<td>SDE-3</td>
+<td>5-8 years</td>
+<td>75-110</td>
+<td>45-60</td>
+<td>8-12</td>
+<td>20-35</td>
+</tr>
+</tbody></table>
+<p><strong>Locations:</strong> Bangalore (HQ), Hyderabad, Delhi NCR</p>
+<hr>
+<h2>🎯 Preparation Tips</h2>
+<ol>
+<li><strong>Focus on E-commerce Scenarios:</strong> Cart, inventory, orders</li>
+<li><strong>LeetCode:</strong> Flipkart company tag (200+ questions)</li>
+<li><strong>System Design:</strong> Critical for SDE-2+</li>
+<li><strong>SQL:</strong> Practice medium-level queries</li>
+<li><strong>Behavioral:</strong> Use STAR format, show ownership</li>
+</ol>
+<p><strong>Timeline:</strong> 3-4 months for campus, 2-3 months for experienced</p>
+<hr>
+
+        </div>
+    </div>
+</body>
+</html>
