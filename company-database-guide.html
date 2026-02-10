@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Database Building Guide</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a202c; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; padding: 60px 40px; text-align: center; }
+        .header h1 { font-size: 3em; margin-bottom: 20px; font-weight: 800; }
+        .header .subtitle { font-size: 1.5em; opacity: 0.95; margin-bottom: 10px; }
+        .header .meta { font-size: 1.1em; opacity: 0.85; }
+        .content { padding: 60px 40px; }
+        h2 { color: #3b82f6; font-size: 2em; margin: 40px 0 20px 0; padding-bottom: 10px; border-bottom: 3px solid #3b82f6; }
+        h3 { color: #2d3748; font-size: 1.6em; margin: 30px 0 15px 0; }
+        h4 { color: #4a5568; font-size: 1.3em; margin: 20px 0 10px 0; }
+        p { margin: 15px 0; font-size: 1.05em; color: #4a5568; }
+        ul, ol { margin: 20px 0 20px 30px; }
+        li { margin: 10px 0; color: #4a5568; font-size: 1.05em; }
+        strong { color: #2d3748; }
+        .code-block { background: #f7fafc; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #3b82f6; overflow-x: auto; }
+        .code-block pre { margin: 0; }
+        .code-block code { font-family: 'Courier New', monospace; font-size: 0.9em; color: #2d3748; }
+        .footer { background: #2d3748; color: white; padding: 40px; text-align: center; }
+        @media (max-width: 768px) { .header h1 { font-size: 2em; } .content { padding: 30px 20px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Company Database Building Guide</h1>
+            <div class="subtitle">How to Build 1,200+ Companies Hiring Indians Database</div>
+            <div class="meta">Complete Implementation Guide | Created Feb 2026</div>
+        </div>
+        <div class="content">
+            <h2>How to Build "1,200+ Companies Hiring Indians" Database</h2>
+<br>
+<p><strong>Goal:</strong> Create the most comprehensive database of tech companies that actively hire Indian professionals and sponsor visas</p>
+<br>
+<p><strong>Timeline:</strong> 2-3 weeks of research  </p>
+<p><strong>Tools Needed:</strong> LinkedIn, Google Sheets, web scraping tools (optional)</p>
+<br>
+<p>---</p>
+<br>
+<h2>Phase 1: Data Collection (Week 1)</h2>
+<br>
+<h3>Method 1: LinkedIn Company Search</h3>
+<br>
+<p><strong>Step 1: Find Companies with Indian Employees</strong></p>
+<br>
+<ol>
+<li>Go to LinkedIn</li>
+<li>Search: `"Software Engineer" AND location:"Amsterdam" AND "India"`</li>
+<li>Filter by: Company size (50-1000+ employees)</li>
+<li>Look at each company → Check "People" tab → See how many Indians work there</li>
+<li>If 10+ Indians → Add to database</li>
+</ul>
+<br>
+<p><strong>What to Track:</strong></p>
+<ul>
+<li>Company name</li>
+<li>Location (city + country)</li>
+<li>Company size</li>
+<li>Number of Indian employees (estimate from LinkedIn)</li>
+<li>Tech stack (from job postings)</li>
+<li>Hiring actively? (check careers page)</li>
+</ul>
+<br>
+<p><strong>Template Spreadsheet Columns:</strong></p>
+<div class="code-block"><pre><code>
+| Company Name | Country | City | Industry | Size | Indians Employed | Tech Stack | Visa Sponsorship | Recent Job Postings | Website | Notes |
+</code></pre></div>
+<br>
+<p>---</p>
+<br>
+<h3>Method 2: Job Board Scraping</h3>
+<br>
+<p><strong>Sites to Check:</strong></p>
+<ol>
+<li>**LinkedIn Jobs** - Filter: "Visa sponsorship"</li>
+<li>**Indeed** - Search: "sponsor visa" + location</li>
+<li>**Glassdoor** - Check company reviews from Indians</li>
+<li>**AngelList** - Startups open to international</li>
+<li>**Landing.Jobs** (Europe-specific)</li>
+<li>**Stack Overflow Jobs** - Tech-focused</li>
+</ul>
+<br>
+<p><strong>Search Queries:</strong></p>
+<ul>
+<li>"software engineer visa sponsorship amsterdam"</li>
+<li>"backend developer relocation support barcelona"</li>
+<li>"data engineer HSM visa netherlands"</li>
+</ul>
+<br>
+<p><strong>Scrape Data:</strong></p>
+<ul>
+<li>Company name</li>
+<li>Job title</li>
+<li>Posted date (recent = actively hiring)</li>
+<li>Visa mentions in JD</li>
+<li>Tech stack mentioned</li>
+</ul>
+<br>
+<p>---</p>
+<br>
+<h3>Method 3: Competitor Analysis</h3>
+<br>
+<p><strong>Check what immigration consultants list:</strong></p>
+<ol>
+<li>Google: "Netherlands tech companies sponsoring visa"</li>
+<li>Look at:</li>
+<p>   - MyVisaJobs.com (H1B sponsors often sponsor elsewhere too)</p>
+<p>   - Glassdoor "Best places to work" lists</p>
+<p>   - TechCrunch lists of European startups</p>
+</ul>
+<br>
+<ol>
+<li>Cross-reference with LinkedIn to verify they hire Indians</li>
+</ul>
+<br>
+<p>---</p>
+<br>
+<h3>Method 4: Reddit/Forum Mining</h3>
+<br>
+<p><strong>Subreddits to Check:</strong></p>
+<ul>
+<li>r/Netherlands</li>
+<li>r/cscareerquestionsEU</li>
+<li>r/IWantOut</li>
+<li>r/india</li>
+</ul>
+<br>
+<p><strong>Search for:</strong></p>
+<ul>
+<li>"Got job offer from [Company]"</li>
+<li>"Just moved to Amsterdam for [Company]"</li>
+<li>"Companies that sponsor visa"</li>
+</ul>
+<br>
+<p><strong>Extract:</strong></p>
+<ul>
+<li>Company names mentioned</li>
+<li>User experiences (good/bad)</li>
+<li>Visa timeline shared</li>
+</ul>
+<br>
+<p>---</p>
+<br>
+<h2>Phase 2: Verification (Week 2)</h2>
+<br>
+<h3>Step 1: Check Company Careers Page</h3>
+<br>
+<p>For each company:</p>
+<ol>
+<li>Visit `company.com/careers`</li>
+<li>Look for:</li>
+<p>   - "We sponsor visas" language</p>
+<p>   - Job postings with "relocation support"</p>
+<p>   - International hiring mention</p>
+</ul>
+<br>
+<h3>Step 2: LinkedIn Deep Dive</h3>
+<br>
+<ol>
+<li>Go to company LinkedIn page</li>
+<li>Click "People" tab</li>
+<li>Filter by:</li>
+<p>   - Location: Current country + "India" (to see who moved from India)</p>
+<p>   - Search "visa" in employee profiles (some mention HSM visa)</p>
+</ul>
+<br>
+<ol>
+<li>Count:</li>
+<p>   - Total Indians at company</p>
+<p>   - Indians who moved from India (check their location history)</p>
+<p>   - Recent joiners (last 6 months)</p>
+</ul>
+<br>
+<p><strong>Why this matters:</strong> </p>
+<ul>
+<li>High Indian count = they actively hire Indians</li>
+<li>Recent joiners = they're hiring NOW</li>
+</ul>
+<br>
+<h3>Step 3: Glassdoor Reviews</h3>
+<br>
+<ol>
+<li>Search company on Glassdoor</li>
+<li>Filter reviews by:</li>
+<p>   - Country: Netherlands/Spain/UAE</p>
+<p>   - Search keyword: "visa"</p>
+</ul>
+<br>
+<ol>
+<li>Look for:</li>
+<p>   - Visa process reviews</p>
+<p>   - International employee experiences</p>
+<p>   - Complaints about visa (= they do sponsor, just slow)</p>
+</ul>
+<br>
+<h3>Step 4: Direct Outreach (Verification)</h3>
+<br>
+<p><strong>Message 2-3 Indians working at target companies:</strong></p>
+<br>
+<p>Template:</p>
+<div class="code-block"><pre><code>
+Hi [Name],
+
+I saw you're working at [Company] in [City]. I'm helping Indian tech professionals relocate to [Country].
+
+Quick question: Does [Company] actively sponsor visas (HSM/work permit) for Indian hires?
+
+If yes, how was your experience with the visa process?
+
+Thanks!
+</code></pre></div>
+<br>
+<p><strong>Track responses:</strong></p>
+<ul>
+<li>Yes/No on visa sponsorship</li>
+<li>Visa type (HSM, Blue Card, etc.)</li>
+<li>Timeline (how long it took)</li>
+<li>Hiring manager contacts (if they're willing to share)</li>
+</ul>
+<br>
+<p>---</p>
+<br>
+<h2>Phase 3: Categorization & Tagging (Week 3)</h2>
+<br>
+<h3>Organize by:</h3>
+<br>
+<p><strong>1. Country</strong></p>
+<ul>
+<li>Netherlands</li>
+<li>Spain</li>
+<li>UAE</li>
+<li>Germany</li>
+<li>Portugal</li>
+<li>Japan</li>
+</ul>
+<br>
+<p><strong>2. City</strong></p>
+<ul>
+<li>Amsterdam, Eindhoven, Rotterdam (Netherlands)</li>
+<li>Barcelona, Madrid (Spain)</li>
+<li>Dubai, Abu Dhabi (UAE)</li>
+<li>Berlin, Munich (Germany)</li>
+<li>Lisbon, Porto (Portugal)</li>
+<li>Tokyo (Japan)</li>
+</ul>
+<br>
+<p><strong>3. Tech Stack</strong></p>
+<ul>
+<li>Backend: Java, Python, Go, Ruby, Rust</li>
+<li>Frontend: React, Vue, Angular</li>
+<li>Full-stack: MERN, MEAN, Django</li>
+<li>Mobile: React Native, Flutter, iOS, Android</li>
+<li>Data: Python, SQL, Spark, Tableau</li>
+<li>DevOps: Kubernetes, Docker, AWS, Terraform</li>
+<li>Embedded: C/C++</li>
+<li>Other: Blockchain, AI/ML, SAP, Salesforce</li>
+</ul>
+<br>
+<p><strong>4. Seniority Level</strong></p>
+<ul>
+<li>Junior-friendly (2-4 years)</li>
+<li>Mid-level (3-6 years)</li>
+<li>Senior (5-8 years)</li>
+<li>Staff/Lead (8+ years)</li>
+</ul>
+<br>
+<p><strong>5. Company Size</strong></p>
+<ul>
+<li>Startup (<50 employees)</li>
+<li>Scale-up (50-500)</li>
+<li>Mid-size (500-2000)</li>
+<li>Enterprise (2000+)</li>
+</ul>
+<br>
+<p><strong>6. Visa Support Quality</strong></p>
+<ul>
+<li>⭐⭐⭐ Excellent (fast, handles everything, many Indian employees)</li>
+<li>⭐⭐ Good (sponsors but slower process)</li>
+<li>⭐ Average (sponsors but bureaucratic)</li>
+</ul>
+<br>
+<p><strong>7. Indian Employee Count</strong></p>
+<ul>
+<li>1-10</li>
+<li>10-50</li>
+<li>50-100</li>
+<li>100-500</li>
+<li>500+</li>
+</ul>
+<br>
+<p><strong>8. Hiring Status</strong></p>
+<ul>
+<li>🟢 Actively hiring (jobs posted in last 30 days)</li>
+<li>🟡 Periodically hiring (jobs posted 1-3 months ago)</li>
+<li>🔴 Not hiring (no recent postings)</li>
+</ul>
+<br>
+<p>---</p>
+<br>
+<h2>Phase 4: Database Structure</h2>
+<br>
+<h3>Recommended Tools:</h3>
+<br>
+<p><strong>Option 1: Google Sheets</strong> (Simple, shareable)</p>
+<p><strong>Option 2: Airtable</strong> (Better for filtering/views)</p>
+<p><strong>Option 3: Notion Database</strong> (Pretty, embeddable)</p>
+<br>
+<h3>Structure:</h3>
+<br>
+<p><strong>Main Table: Companies</strong></p>
+<div class="code-block"><pre><code>
+| ID | Company Name | Country | City | Industry | Size | Indian Count | Visa Support | Hiring Status | Tech Stacks | Website | Careers Page | Notes |
+</code></pre></div>
+<br>
+<p><strong>Related Table: Jobs</strong></p>
+<div class="code-block"><pre><code>
+| Company ID | Job Title | Tech Stack | Seniority | Posted Date | Application Link | Salary Range | Visa Mentioned? |
+</code></pre></div>
+<br>
+<p><strong>Related Table: Contacts</strong></p>
+<div class="code-block"><pre><code>
+| Company ID | Contact Name | Role | LinkedIn | Email | Notes |
+</code></pre></div>
+<br>
+<p>---</p>
+<br>
+<h2>Sample Database Entry</h2>
+<br>
+<div class="code-block"><pre><code>
+Company: Booking.com
+Country: Netherlands
+City: Amsterdam
+Industry: Travel Tech
+Size: 5,000-10,000
+Indian Count: 300+
+Visa Support: ⭐⭐⭐ (HSM, 2-3 weeks, excellent)
+Hiring Status: 🟢 (20+ open roles)
+Tech Stacks: Java, Python, React, Kubernetes, AWS
+Website: booking.com
+Careers: careers.booking.com
+Notes: Very Indian-friendly, strong community, good work-life balance
+
+Recent Jobs:
+1. Senior Backend Engineer (Java) - €70K-95K - Posted Feb 1
+2. Frontend Engineer (React) - €60K-80K - Posted Jan 28
+3. DevOps Engineer (Kubernetes) - €65K-85K - Posted Feb 5
+
+Contacts:
+- Raj Sharma (Engineering Manager) - linkedin.com/in/rajsharma - raj.sharma@booking.com
+</code></pre></div>
+<br>
+<p>---</p>
+<br>
+<h2>Target Database Size</h2>
+<br>
+<h3>Tier 1 (Netherlands):</h3>
+<ul>
+<li>**Target:** 200-300 companies</li>
+<li>**Focus:** Amsterdam (120), Eindhoven (50), Rotterdam (30), Utrecht (20), Others (30)</li>
+</ul>
+<br>
+<h3>Tier 1 (UAE):</h3>
+<ul>
+<li>**Target:** 300-400 companies</li>
+<li>**Focus:** Dubai (250), Abu Dhabi (100), Sharjah (50)</li>
+</ul>
+<br>
+<h3>Tier 1 (Germany):</h3>
+<ul>
+<li>**Target:** 400-500 companies</li>
+<li>**Focus:** Berlin (200), Munich (150), Frankfurt (100), Others (50)</li>
+</ul>
+<br>
+<h3>Tier 2 (Spain):</h3>
+<ul>
+<li>**Target:** 100-150 companies</li>
+<li>**Focus:** Barcelona (80), Madrid (60), Valencia (10)</li>
+</ul>
+<br>
+<h3>Tier 2 (Portugal):</h3>
+<ul>
+<li>**Target:** 80-100 companies</li>
+<li>**Focus:** Lisbon (70), Porto (30)</li>
+</ul>
+<br>
+<h3>Tier 3 (Japan):</h3>
+<ul>
+<li>**Target:** 50-80 companies</li>
+<li>**Focus:** Tokyo (60), Osaka (20)</li>
+</ul>
+<br>
+<p><strong>Total: 1,200-1,500 companies</strong></p>
+<br>
+<p>---</p>
+<br>
+<h2>Automation Tips</h2>
+<br>
+<h3>Use LinkedIn Sales Navigator (Paid)</h3>
+<br>
+<p><strong>Filters:</strong></p>
+<ul>
+<li>Company headcount</li>
+<li>Industry</li>
+<li>Geography</li>
+<li>Company keywords ("visa sponsorship", "international hiring")</li>
+</ul>
+<br>
+<p><strong>Export:</strong></p>
+<ul>
+<li>Company list</li>
+<li>Employee data</li>
+<li>Job postings</li>
+</ul>
+<br>
+<h3>Web Scraping (Technical)</h3>
+<br>
+<p><strong>Tools:</strong></p>
+<ul>
+<li>Beautiful Soup (Python)</li>
+<li>Scrapy</li>
+<li>Phantombuster (LinkedIn scraper)</li>
+</ul>
+<br>
+<p><strong>What to Scrape:</strong></p>
+<ul>
+<li>Company career pages</li>
+<li>Job board listings</li>
+<li>LinkedIn company pages</li>
+</ul>
+<br>
+<p><strong>Legal Note:</strong> Check LinkedIn ToS. Scraping is gray area. Manual research safer.</p>
+<br>
+<p>---</p>
+<br>
+<h2>Maintenance Schedule</h2>
+<br>
+<h3>Weekly:</h3>
+<ul>
+<li>Add 10-20 new companies (ongoing research)</li>
+<li>Update hiring status (check for new job postings)</li>
+<li>Remove companies that stopped hiring</li>
+</ul>
+<br>
+<h3>Monthly:</h3>
+<ul>
+<li>Re-verify top 50 companies (are they still hiring?)</li>
+<li>Update salary ranges (based on new data)</li>
+<li>Add new contacts (hiring managers)</li>
+</ul>
+<br>
+<h3>Quarterly:</h3>
+<ul>
+<li>Full audit (remove inactive companies)</li>
+<li>Add emerging startups (via TechCrunch, AngelList)</li>
+<li>Update visa policy changes (any new requirements?)</li>
+</ul>
+<br>
+<p>---</p>
+<br>
+<h2>Making It a Lead Magnet</h2>
+<br>
+<h3>Free Version (Public):</h3>
+<ul>
+<li>Top 50 companies per country</li>
+<li>Basic info (name, location, tech stack, careers link)</li>
+<li>No contacts, no detailed notes</li>
+</ul>
+<br>
+<h3>Premium Version (For Customers):</h3>
+<ul>
+<li>Full 1,200 company database</li>
+<li>Hiring manager contacts</li>
+<li>Detailed notes (culture, visa process, interview tips)</li>
+<li>Updated monthly</li>
+<li>Salary ranges</li>
+<li>Application status tracking</li>
+</ul>
+<br>
+<p><strong>Positioning:</strong></p>
+<p>"Access to 1,200+ tech companies actively hiring Indians (with visa sponsorship)"</p>
+<br>
+<p>---</p>
+<br>
+<h2>Quality Control</h2>
+<br>
+<h3>Red Flags (Remove These):</h3>
+<ul>
+<li>❌ Companies with bad Glassdoor reviews re: visa process</li>
+<li>❌ Companies known for visa bait-and-switch</li>
+<li>❌ Companies that laid off Indians recently</li>
+<li>❌ Companies with toxic culture (Reddit warnings)</li>
+</ul>
+<br>
+<h3>Green Flags (Prioritize These):</h3>
+<ul>
+<li>✅ 50+ Indians employed (proven track record)</li>
+<li>✅ Recent positive Glassdoor reviews from Indians</li>
+<li>✅ Actively hiring (multiple roles open)</li>
+<li>✅ Fast visa processing (verified by employees)</li>
+<li>✅ Good work-life balance (important for quality leads)</li>
+</ul>
+<br>
+<p>---</p>
+<br>
+<h2>Using the Database for Sales</h2>
+<br>
+<h3>How to Pitch It:</h3>
+<br>
+<p><strong>To Prospects:</strong></p>
+<p>"I have a database of 1,200+ companies that actively hire Indian engineers and sponsor visas. </p>
+<br>
+<p>Not random companies - these are VERIFIED to:</p>
+<p>✅ Hire Indians (checked LinkedIn for proof)</p>
+<p>✅ Sponsor visas (confirmed by current employees)  </p>
+<p>✅ Actively hiring NOW (checked last 30 days)</p>
+<br>
+<p>You'll save 100+ hours of research. Apply to the RIGHT companies from Day 1."</p>
+<br>
+<p><strong>In Your Program:</strong></p>
+<ul>
+<li>Week 1: Share personalized list of 50 companies (based on their tech stack)</li>
+<li>Week 2: Narrow down to 20 targets</li>
+<li>Week 3: Direct intros to 5 companies (where you have contacts)</li>
+<li>Week 4+: Application blitz to remaining 15</li>
+</ul>
+<br>
+<p>---</p>
+<br>
+<h2>Pro Tips</h2>
+<br>
+<ol>
+<li>**Start with Netherlands:** Easiest visa, most Indians, best starting point</li>
+<li>**LinkedIn is gold:** 80% of your data will come from LinkedIn research</li>
+<li>**Talk to real people:** Reddit, forums, DMs = best insider info</li>
+<li>**Update constantly:** Companies change. Database = living document</li>
+<li>**Build relationships:** Connect with hiring managers now, not when you need them</li>
+<li>**Track success:** When someone lands a job, mark that company as "verified"</li>
+</ul>
+<br>
+<p>---</p>
+<br>
+<h2>Example: Netherlands Database (First 20 Companies)</h2>
+<br>
+<div class="code-block"><pre><code>
+1. Booking.com - Amsterdam - Java/Python/React - 300+ Indians - ⭐⭐⭐
+2. Adyen - Amsterdam - Java/Python - 80+ Indians - ⭐⭐⭐
+3. Elastic - Amsterdam - Go/Java - 40+ Indians - ⭐⭐⭐
+4. TomTom - Amsterdam - C++/Java - 60+ Indians - ⭐⭐
+5. ING Bank - Amsterdam - Java/.NET - 200+ Indians - ⭐⭐
+6. ASML - Eindhoven - C/C++/Python - 500+ Indians - ⭐⭐⭐
+7. Philips - Eindhoven - Embedded/AI - 300+ Indians - ⭐⭐
+8. Deliveroo - Amsterdam - Ruby/Python - 20+ Indians - ⭐⭐
+9. Mollie - Amsterdam - Python/PHP - 15+ Indians - ⭐⭐
+10. Coolblue - Rotterdam - .NET/React - 30+ Indians - ⭐⭐
+[Continue to 200...]
+</code></pre></div>
+<br>
+<p>---</p>
+<br>
+<h2>Deliverable</h2>
+<br>
+<p><strong>Final Output:</strong></p>
+<ul>
+<li>1,200-1,500 verified companies</li>
+<li>Organized by country, city, tech stack</li>
+<li>Hiring status updated weekly</li>
+<li>Contact database (500+ hiring managers)</li>
+<li>Job posting tracker</li>
+<li>Salary range data</li>
+<li>Company culture notes</li>
+</ul>
+<br>
+<p><strong>Format:</strong></p>
+<ul>
+<li>Google Sheet (shareable with customers)</li>
+<li>Airtable view (filterable by tech stack)</li>
+<li>PDF export (top 200 for lead magnet)</li>
+</ul>
+<br>
+<p><strong>Value Proposition:</strong></p>
+<p>"This database represents 300+ hours of research. You get instant access to companies that ACTUALLY hire Indians."</p>
+<br>
+<p>---</p>
+<br>
+<p><strong>EXECUTE THIS. YOUR DATABASE = YOUR MOAT.</strong> 🚀</p>
+<br>
+        </div>
+        <div class="footer">
+            <p style="font-size: 1.2em; margin-bottom: 10px;">Created: February 10, 2026</p>
+            <p>Part of Global Tech Relocation Business Blueprint</p>
+        </div>
+    </div>
+</body>
+</html>
